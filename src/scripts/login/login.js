@@ -1,6 +1,37 @@
 import React, { Component } from "react"
+import APIManager from "../../modules/apimanager"
 
 class Login extends Component {
+    state = {
+        username: "",
+        password: ""
+    }
+
+    newUser = () => {
+        console.log("hello firing or sone shit")
+        let user = {
+            username: this.state.username,
+            password: this.state.password,
+         }
+        APIManager.post("users", user).then(newUser => newUser)
+     }
+
+    handleFieldChange = (evt) => {
+        const stateToChange = {}
+        stateToChange[evt.target.id] = evt.target.value
+        this.setState(stateToChange)
+    }
+
+    handleLogin = (e) => {
+        e.preventDefault()
+        /*
+            For now, just store the email and password that
+            the customer enters into local storage.
+        */
+        let credentials = {username: this.state.username, password: this.state.password}
+        this.props.setUser(credentials);
+        this.props.history.push("/");
+    }
 
 
     render() {
@@ -9,11 +40,11 @@ class Login extends Component {
                 <fieldset>
                     <h3>Join your coven:</h3>
                     <div className="formgrid">
-                        <input onChange={this.handleFieldChange} type="email"
-                            id="email"
-                            placeholder="Email address"
+                        <input onChange={this.handleFieldChange} type="text"
+                            id="username"
+                            placeholder="Username"
                             required="" autoFocus="" />
-                        <label htmlFor="inputEmail">Email address</label>
+                        <label htmlFor="inputUsername">Username</label>
 
                         <input onChange={this.handleFieldChange} type="password"
                             id="password"
@@ -21,7 +52,7 @@ class Login extends Component {
                             required="" />
                         <label htmlFor="inputPassword">Password</label>
                     </div>
-                    <button type="submit">
+                    <button onClick={this.newUser} type="submit">
                         Sign in
             </button>
                 </fieldset>

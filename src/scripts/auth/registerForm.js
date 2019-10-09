@@ -6,14 +6,14 @@ export default class UserForm extends Component {
         username: "",
         password: ""
     }
-
-    newUser = () => {
-        console.log("hello firing or sone shit")
+    
+    newUser = (e) => {
+        e.preventDefault()
         let user = {
             username: this.state.username,
             password: this.state.password,
-         }
-        APIManager.post("users", user).then(newUser => newUser)
+        }
+        APIManager.post("users", user).then(newUser => this.handleLogin())
      }
 
     handleFieldChange = (evt) => {
@@ -22,8 +22,7 @@ export default class UserForm extends Component {
         this.setState(stateToChange)
     }
 
-    handleLogin = (e) => {
-        e.preventDefault()
+    handleLogin = () => {
         /*
             For now, just store the email and password that
             the customer enters into local storage.
@@ -35,7 +34,7 @@ export default class UserForm extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleLogin}>
+            <form>
                 <fieldset>
                     <h3>Join your coven:</h3>
                     <div className="formgrid">

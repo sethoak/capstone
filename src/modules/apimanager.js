@@ -9,6 +9,10 @@ export default {
 
             },
             body: JSON.stringify(newObj)
-            }).then(newObj => newObj.JSON())
-          }
+            }).then(newObj => newObj.json())
+          },
+
+    getAll(resource){
+        return fetch(`${url}/${resource}`).then(newObj => newObj.json())
+    }
 }

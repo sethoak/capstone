@@ -1,19 +1,19 @@
-import React, { Component } from "react"
+import React, { Component} from "react"
 import APIManager from "../../modules/apimanager"
 
-class Login extends Component {
+export default class UserForm extends Component {
     state = {
         username: "",
         password: ""
     }
-
-    newUser = () => {
-        console.log("hello firing or sone shit")
+    
+    newUser = (e) => {
+        e.preventDefault()
         let user = {
             username: this.state.username,
             password: this.state.password,
-         }
-        APIManager.post("users", user).then(newUser => newUser)
+        }
+        APIManager.post("users", user).then(newUser => this.handleLogin())
      }
 
     handleFieldChange = (evt) => {
@@ -22,8 +22,7 @@ class Login extends Component {
         this.setState(stateToChange)
     }
 
-    handleLogin = (e) => {
-        e.preventDefault()
+    handleLogin = () => {
         /*
             For now, just store the email and password that
             the customer enters into local storage.
@@ -33,10 +32,9 @@ class Login extends Component {
         this.props.history.push("/");
     }
 
-
     render() {
         return (
-            <form onSubmit={this.handleLogin}>
+            <form>
                 <fieldset>
                     <h3>Join your coven:</h3>
                     <div className="formgrid">
@@ -51,15 +49,10 @@ class Login extends Component {
                             placeholder="Password"
                             required="" />
                         <label htmlFor="inputPassword">Password</label>
+                        <button type="button" onClick={this.newUser}>
+                            Sign In
+                        </button>
                     </div>
-                    <button onClick={this.newUser} type="submit">
-                        Sign in
-            </button>
-                </fieldset>
+            </fieldset>
             </form>
-        )
-    }
-
-}
-
-export default Login
+)}}

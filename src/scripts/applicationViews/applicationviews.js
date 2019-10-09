@@ -1,7 +1,10 @@
 import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from 'react'
 import Home from '../../home/home'
-import Login from '../login/login'
+import Login from '../auth/login'
+import UserForm from '../auth/registerForm'
+import LoginForm from '../auth/loginForm'
+
 export default class ApplicationViews extends Component {
 
     // isAuthenticated = () => localStorage.getItem("credentials") !== null
@@ -13,8 +16,14 @@ render() {
           return <Home />
         }} />
 
-            <Route path="/login" render={props => {
-          return <Login setUser={this.props.setUser} {...props} />
+            <Route exact path="/login" render={props => {
+          return <Login {...props} />
+        }} />
+            <Route exact path="/login/register-form" render={props => {
+          return <UserForm setUser={this.props.setUser} {...props} />
+        }} />
+          <Route exact path="/login/login-form" render={props => {
+          return <LoginForm setUser={this.props.setUser} {...props} />
         }} />
 
 

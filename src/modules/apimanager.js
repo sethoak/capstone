@@ -1,4 +1,4 @@
-let url = "http://localhost:3000"
+let url = "http://localhost:8088"
 
 export default {
     post(resource, newObj){

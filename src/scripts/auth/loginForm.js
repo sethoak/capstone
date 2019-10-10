@@ -10,23 +10,6 @@ export default class LoginForm extends Component {
     users: []
   };
 
-  rememberMe = () => {
-    let box = document.querySelector(".remember");
-    if (box.checked === true) {
-      let confirm = window.confirm("Are you sure?");
-      if (confirm === true) {
-        localStorage.setItem(
-          "credentials",
-          JSON.stringify({
-            email: this.state.username,
-            password: this.state.password,
-            userId: this.state.userId
-          })
-        );
-      }
-    }
-  };
-
   handleFieldChange = evt => {
     const stateToChange = {};
     stateToChange[evt.target.id] = evt.target.value;
@@ -45,12 +28,16 @@ export default class LoginForm extends Component {
           password: this.state.password,
           userId: user.id
         };
-        this.rememberMe();
-        this.props.setUser(credentials);
-        this.props.history.push("/");
+        let box = document.querySelector(".remember");
+        if(box.checked === true){
+          this.props.rememberMe(credentials);
+          this.props.history.push("/")
+        } else {
+          this.props.setUser(credentials);
+          this.props.history.push("/");
+        }
       } else {
-        alert("You need to register");
-        return this.props.history.push("/login/register-form");
+        // return this.props.history.push("/login/register-form");
       }
     });
   };

@@ -12,6 +12,7 @@ class App extends Component {
   };
 
   isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
+  isRemembered = () => localStorage.getItem("credentials") !== null;
 
   setUser = authUser => {
     sessionStorage.setItem("credentials", JSON.stringify(authUser));
@@ -20,8 +21,18 @@ class App extends Component {
     });
   };
 
+  rememberMe = user => {
+    localStorage.setItem(
+      "credentials",
+      JSON.stringify(user))
+      this.setState({
+        user: this.isRemembered()
+      });
+  }
+
   clearUser = () => {
-		sessionStorage.clear();
+    sessionStorage.clear();
+    localStorage.clear();
 
 		this.setState({
 			user: this.isAuthenticated()
@@ -32,7 +43,7 @@ class App extends Component {
     return (
       <>
         <NavBar user={this.state.user} clearUser={this.clearUser}/>
-        <ApplicationViews user={this.state.user} setUser={this.setUser} />
+        <ApplicationViews rememberMe={this.rememberMe} user={this.state.user} setUser={this.setUser} />
       </>
     );
   }

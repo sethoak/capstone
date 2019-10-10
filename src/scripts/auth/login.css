@@ -2,11 +2,10 @@ h3 {
     color: white;
 }
 body {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    background: url(https://ae01.alicdn.com/kf/HTB1rOXyoQOWBuNjSsppq6xPgpXap/Witch-Cauldron-with-Color-Smoke-for-Halloween-backdrop-Vinyl-cloth-High-quality-Computer-print-party-Background.jpg_640x640.jpg);
+    background: url(https://ae01.alicdn.com/kf/HTB1rOXyoQOWBuNjSsppq6xPgpXap/Witch-Cauldron-with-Color-Smoke-for-Halloween-backdrop-Vinyl-cloth-High-quality-Computer-print-party-Background.jpg_640x640.jpg)no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 .formgrid {

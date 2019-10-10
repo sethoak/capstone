@@ -46,7 +46,7 @@ class NavBar extends Component {
                 </li>
                 <li>
                   <Link className="nav-link" to="/news">
-                    News
+                    Newssss
                   </Link>
                 </li>
                 <li>

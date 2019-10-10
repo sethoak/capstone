@@ -11,18 +11,27 @@ class App extends Component {
     user: ""
   };
 
-  isAuthenticated = () => localStorage.getItem("credentials") !== null;
+  isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
 
   setUser = authUser => {
-    localStorage.setItem("credentials", JSON.stringify(authUser));
+    sessionStorage.setItem("credentials", JSON.stringify(authUser));
     this.setState({
       user: this.isAuthenticated()
     });
   };
+
+  clearUser = () => {
+		sessionStorage.clear();
+
+		this.setState({
+			user: this.isAuthenticated()
+		});
+  };
+  
   render() {
     return (
       <>
-        <NavBar user={this.state.user} />
+        <NavBar user={this.state.user} clearUser={this.clearUser}/>
         <ApplicationViews user={this.state.user} setUser={this.setUser} />
       </>
     );

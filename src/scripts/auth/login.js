@@ -8,7 +8,7 @@ class Login extends Component {
         <Link to="/login/login-form">
           <button type="submit">Sign in</button>
         </Link>
-        <Link to="/login/register-form">after
+        <Link to="/login/register-form">
           <button type="button">Register</button>
         </Link>
       </React.Fragment>

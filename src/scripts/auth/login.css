@@ -1,3 +1,127 @@
 h3 {
     color: white;
 }
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://ae01.alicdn.com/kf/HTB1rOXyoQOWBuNjSsppq6xPgpXap/Witch-Cauldron-with-Color-Smoke-for-Halloween-backdrop-Vinyl-cloth-High-quality-Computer-print-party-Background.jpg_640x640.jpg);
+    background-size: cover;
+}
+.formgrid {
+margin: 0 auto 0 auto;  
+width:100%; 
+text-align:center;
+/* margin: 20px 0px 20px 0px; */
+}
+
+.username {
+    background:#ecf0f1;
+    border: #ccc 1px solid;
+    border-bottom: #ccc 2px solid;
+    padding: 8px;
+    width:250px;
+    color:#AAAAAA;
+    margin-top:10px;
+    font-size:1em;
+    border-radius:4px;
+}
+.box {
+    width:300px;
+    border-radius:6px;
+    margin: 0 auto 0 auto;
+    padding:0px 0px 70px 0px;
+    border:black 4px solid; 
+}
+.bod {
+    /* background:white;
+    width:300px;
+    border-radius:6px;
+    margin: 20px 0px 20px 0px;
+    padding:0px 0px 70px 0px;
+    border: #2980b9 4px solid; */
+    position: fixed;
+    width: 350px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -175px;
+    background: #674d72;
+    padding-top: 10px;   
+}
+
+/* .bod {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+} */
+.password {
+    border-radius:4px;
+    background:#ecf0f1;
+    border: #ccc 1px solid;
+    padding: 8px;
+    width:250px;
+    font-size:1em;
+    margin-top: 2%;
+  }
+
+  .signIn {
+    background:black;
+    width:125px;
+    padding-top:5px;
+    padding-bottom:5px;
+    margin-top: 2%;
+    color:white;
+    border-radius:4px;
+    border: black 1px solid;
+    font-family: 'Cinzel Decorative', cursive !important;
+  }
+
+  .loginHeader {
+    background: black;
+    padding: 20px;
+    font-size: 1.4em;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    font-family: 'Cinzel Decorative', cursive !important;
+  }
+
+  .signInBtn {
+    background:#674d72;
+    width:200px;
+    height:100px;
+    padding-top:5px;
+    padding-bottom:5px;
+    margin-top: 2%;
+    color:white;
+    border-radius:4px;
+    border: #674d72 1px solid;
+    font-family: 'Cinzel Decorative', cursive !important;
+    border:2px solid transparent; 
+    margin-left:20%;
+    margin-right:10%;
+    margin-top: 10%;
+    font-size: 1em;
+  }
+  .registerBtn {
+    background:#674d72;
+    width:200px;
+    height:100px;
+    padding-top:5px;
+    padding-bottom:5px;
+    margin-top: 2%;
+    color:white;
+    border-radius:4px;
+    border: #674d72 1px solid;
+    font-family: 'Cinzel Decorative', cursive !important;
+    border:2px solid transparent; 
+    margin-right:10%;
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+
+  }

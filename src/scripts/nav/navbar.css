@@ -34,7 +34,7 @@ small {
   }
 
   nav .container a:hover {
-    color: maroon;
+    color: #1B2D5B;
   }
 
   nav span {
@@ -42,5 +42,5 @@ small {
     text-decoration: underline;
  }
  nav span:hover {
-  color: maroon;
+  color: #1B2D5B;
  }

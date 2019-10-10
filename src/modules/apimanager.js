@@ -6,7 +6,6 @@ export default {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
-
             },
             body: JSON.stringify(newObj)
             }).then(newObj => newObj.json())
@@ -14,5 +13,10 @@ export default {
 
     getAll(resource){
         return fetch(`${url}/${resource}`).then(newObj => newObj.json())
+    },
+    delete(resource, id){
+        return fetch(`${url}/${resource}/${id}`,{
+            method: "DELETE",
+        }).then(newObj => newObj.json())
     }
 }

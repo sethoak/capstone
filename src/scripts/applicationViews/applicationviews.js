@@ -6,6 +6,7 @@ import UserForm from "../auth/registerForm";
 import LoginForm from "../auth/loginForm";
 import MessageList from "../messages/messagelist";
 import NewsList from "../news/newslist";
+import NewsForm from "../news/newsform"
 
 export default class ApplicationViews extends Component {
   isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
@@ -88,6 +89,17 @@ export default class ApplicationViews extends Component {
           render={props => {
             if (this.isAuthenticated || this.isRemebered) {
               return <NewsList {...props} />;
+            } else {
+              return <Redirect to="/login" />;
+            }
+          }}
+        />
+        <Route
+          exact
+          path="/news/new"
+          render={props => {
+            if (this.isAuthenticated || this.isRemebered) {
+              return <NewsForm {...props} />;
             } else {
               return <Redirect to="/login" />;
             }

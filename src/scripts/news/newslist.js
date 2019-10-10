@@ -21,18 +21,18 @@ class NewsList extends Component {
     });
   }
 
-  //   deleteArticle = id => {
-  //     APImanager.deleteArticle(id).then(() => {
-  //       NewsManager.getAllArticles().then(newArticle => {
-  //         this.setState({
-  //           articles: newArticle
-  //         });
-  //       });
-  //     });
-  //   };
+    deleteArticle = id => {
+      APImanager.delete("articles", id).then(() => {
+        APImanager.getAll("articles").then(newArticle => {
+          this.setState({
+            articles: newArticle
+          });
+        });
+      });
+    };
 
   render() {
-    console.log("NewsList: Render", this.state.articles);
+    console.log("NewsList: Render!!!!", this.state.articles);
 
     return (
       <>
@@ -48,14 +48,14 @@ class NewsList extends Component {
           </button>
         </section>
         <div>
-          {this.state.articles.map(article =>
+          {this.state.articles.map(article =>(
             <NewsCard
               key={article.id}
               article={article}
               deleteArticle={this.deleteArticle}
               {...this.props}
             />
-          )}
+          ))}
         </div>
       </>
     );

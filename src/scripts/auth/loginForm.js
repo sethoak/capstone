@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import APIManager from "../../modules/apimanager";
-import { Link, Route, withRouter, Redirect} from "react-router-dom";
+import { Link, Route, withRouter, Redirect } from "react-router-dom";
 
 export default class LoginForm extends Component {
   state = {
@@ -11,10 +11,10 @@ export default class LoginForm extends Component {
   };
 
   rememberMe = () => {
-    let box = document.querySelector(".remember")
-    if(box.checked === true){
-      let confirm = window.confirm("Are you sure?")
-      if(confirm ===  true){
+    let box = document.querySelector(".remember");
+    if (box.checked === true) {
+      let confirm = window.confirm("Are you sure?");
+      if (confirm === true) {
         localStorage.setItem(
           "credentials",
           JSON.stringify({
@@ -22,10 +22,10 @@ export default class LoginForm extends Component {
             password: this.state.password,
             userId: this.state.userId
           })
-          )
-        }
+        );
       }
-  }
+    }
+  };
 
   handleFieldChange = evt => {
     const stateToChange = {};
@@ -45,11 +45,11 @@ export default class LoginForm extends Component {
           password: this.state.password,
           userId: user.id
         };
-        this.rememberMe()
+        this.rememberMe();
         this.props.setUser(credentials);
         this.props.history.push("/");
       } else {
-        alert("You need to register")
+        alert("You need to register");
         return this.props.history.push("/login/register-form");
       }
     });
@@ -69,38 +69,42 @@ export default class LoginForm extends Component {
   render() {
     return (
       <form>
-        <fieldset>
-          <h3>Join your coven:</h3>
-          <div className="formgrid">
-            <input
-              onChange={this.handleFieldChange}
-              type="text"
-              id="username"
-              placeholder="Username"
-              required=""
-              autoFocus=""
-            />
-            <label htmlFor="inputUsername">Username</label>
+        <div className="box">
+          <fieldset className="bod">
+            <h3 className="loginHeader">Join your coven:</h3>
+            <div className="formgrid">
+              <input
+                className="username"
+                onChange={this.handleFieldChange}
+                type="text"
+                id="username"
+                placeholder="Username"
+                required=""
+                autoFocus=""
+              />
+              <label htmlFor="inputUsername"></label>
 
-            <input
-              onChange={this.handleFieldChange}
-              type="password"
-              id="password"
-              placeholder="Password"
-              required=""
-            />
-            <div>
-            <label>Remember Me</label>
-            <input type="checkbox" className="remember"></input>
+              <input
+                className="password"
+                onChange={this.handleFieldChange}
+                type="password"
+                id="password"
+                placeholder="Password"
+                required=""
+              ></input>
+              <div>
+                <label>Remember Me</label>
+                <input type="checkbox" className="remember"></input>
+              </div>
+              <div>
+                <label htmlFor="inputPassword">Password</label>
+                <button type="button" onClick={this.handleLogin}>
+                  Sign In
+                </button>
+              </div>
             </div>
-            <div>
-            <label htmlFor="inputPassword">Password</label>
-            <button type="button" onClick={this.handleLogin}>
-              Sign In
-            </button>
-            </div>
-          </div>
-        </fieldset>
+          </fieldset>
+        </div>
       </form>
     );
   }

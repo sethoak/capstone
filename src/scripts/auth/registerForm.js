@@ -1,5 +1,6 @@
 import React, { Component} from "react"
 import APIManager from "../../modules/apimanager"
+import './login.css';
 
 export default class UserForm extends Component {
     state = {
@@ -80,17 +81,19 @@ getData = e => {
 
     render() {
         return (
+            
             <form>
-                <fieldset>
-                    <h3>Join your coven:</h3>
+                <div className="box">
+                    <fieldset className="bod">
+                    <h3 className="loginHeader">Join your coven:</h3>
                     <div className="formgrid">
-                        <input onChange={this.handleFieldChange} type="text"
+                        <input className="username" onChange={this.handleFieldChange} type="text"
                             id="username"
                             placeholder="Username"
                             required="" autoFocus="" />
-                        <label htmlFor="inputUsername">Username</label>
+                        <label htmlFor="inputUsername"></label>
 
-                        <input onChange={this.handleFieldChange} type="password"
+                        <input className="password" onChange={this.handleFieldChange} type="password"
                             id="password"
                             placeholder="Password"
                             required="" />
@@ -100,5 +103,7 @@ getData = e => {
                         </button>
                     </div>
             </fieldset>
+            </div>
             </form>
+            
 )}}

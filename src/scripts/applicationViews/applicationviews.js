@@ -4,6 +4,7 @@ import Home from '../../home/home'
 import Login from '../auth/login'
 import UserForm from '../auth/registerForm'
 import LoginForm from '../auth/loginForm'
+import MessageList from "../messages/messagelist"
 
 export default class ApplicationViews extends Component {
 
@@ -42,6 +43,10 @@ render() {
               return <Redirect to="/login" />
             }
         }} />
+          <Route exact path="/chat" render={props => {
+          return <MessageList {...props} />
+        }} />
+
 
 
     </React.Fragment> ) }}

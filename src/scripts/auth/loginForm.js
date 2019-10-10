@@ -51,10 +51,11 @@ export default class LoginForm extends Component {
   render() {
     return (
       <form>
-        <fieldset>
-          <h3>Join your coven:</h3>
+      <div className="box">
+        <fieldset className="bod">
+          <h3 className="loginHeader">Join your coven:</h3>
           <div className="formgrid">
-            <input
+            <input className="username"
               onChange={this.handleFieldChange}
               type="text"
               id="username"
@@ -62,21 +63,22 @@ export default class LoginForm extends Component {
               required=""
               autoFocus=""
             />
-            <label htmlFor="inputUsername">Username</label>
+            <label htmlFor="inputUsername"></label>
 
-            <input
+            <input className="password"
               onChange={this.handleFieldChange}
               type="password"
               id="password"
               placeholder="Password"
               required=""
             />
-            <label htmlFor="inputPassword">Password</label>
-            <button type="button" onClick={this.handleLogin}>
-              Sign In
+            <label htmlFor="inputPassword"></label>
+            <button type="button" className="signIn" onClick={this.handleLogin}>
+              Login
             </button>
           </div>
         </fieldset>
+        </div>
       </form>
     );
   }

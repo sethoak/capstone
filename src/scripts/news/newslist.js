@@ -36,6 +36,16 @@ class NewsList extends Component {
 
     return (
       <>
+         <div>
+          {this.state.articles.map(article =>(
+            <NewsCard
+              key={article.id}
+              article={article}
+              deleteArticle={this.deleteArticle}
+              {...this.props}
+            />
+          ))}
+        </div>
         <section>
           <button
             type="button"
@@ -47,16 +57,6 @@ class NewsList extends Component {
             Enter News Article
           </button>
         </section>
-        <div>
-          {this.state.articles.map(article =>(
-            <NewsCard
-              key={article.id}
-              article={article}
-              deleteArticle={this.deleteArticle}
-              {...this.props}
-            />
-          ))}
-        </div>
       </>
     );
   }

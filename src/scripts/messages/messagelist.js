@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import MessageCard from "./messagecard";
 // import { Link } from "react-router-dom"
 import "./message.css";
-import { Timestamp } from "react-timestamp";
 
 export default class MessageList extends Component {
   state = {

@@ -14,6 +14,9 @@ export default {
     getAll(resource){
         return fetch(`${url}/${resource}`).then(newObj => newObj.json())
     },
+    getAll(resource, obj){
+        return fetch(`${url}/${resource}`).then(newObj => newObj.json())
+    },
     delete(resource, id){
         return fetch(`${url}/${resource}/${id}`,{
             method: "DELETE",
@@ -30,5 +33,8 @@ export default {
     },
     get(resource, id){
         return fetch(`${url}/${resource}/${id}`).then(newObj => newObj.json())
+    }
+    get(resource, friendsName){
+        return fetch(`${url}/friends?name=${friendsName}`).then(newObj => newObj.json())
     }
 }

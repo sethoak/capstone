@@ -11,7 +11,7 @@ export default class MessageCard extends Component {
   getData = () => {
     APIManager.get("users", this.props.message.userId).then(parsedUser =>
       this.setState({
-        user: parsedUser
+        user: parsedUser.id
       })
     );
   };
@@ -29,7 +29,7 @@ export default class MessageCard extends Component {
             <h5>{this.state.user.username}</h5>
             <p>{this.props.message.text}</p>
             <p>{this.props.message.date}</p>
-            <div class="speech-bubble-ds-arrow"></div>
+            <div className="speech-bubble-ds-arrow"></div>
           </div>
           <div>
             {

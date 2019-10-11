@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default class AddEditButton extends Component {
   render() {
-    if (this.props.message.userId === this.props.user.id) {
+    if (this.props.message.userId === parseInt(this.props.user)) {
       return (
         <Link to="/chat/:messageId(\d+)/edit">
           <button type="button">Edit</button>

@@ -1,9 +1,13 @@
 p {
-    color: white !important;
+    color: white;
 }
 
 .messageLabel{
-    color: white !important;
+    color: white;
+}
+
+h5{
+    color: white;
 }
 
 .messageBox {

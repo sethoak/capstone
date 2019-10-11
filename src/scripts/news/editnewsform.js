@@ -36,12 +36,11 @@ class NewsEditForm extends Component {
   componentDidMount() {
     APIManager.get("articles", this.props.match.params.articleId).then(
       article => {
-        const timestamp = new Date().toLocaleString();
         this.setState({
           title: article.title,
           synopsis: article.synopsis,
           URL: article.URL,
-          timestamp: timestamp,
+          date: article.date,
           loadingStatus: false
         });
       }

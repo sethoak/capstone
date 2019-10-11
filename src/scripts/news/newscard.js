@@ -27,10 +27,10 @@ class NewsCard extends Component {
         <p>{this.props.article.URL}</p>
         <p className="sectionTitle">
           <b>
-            <u>Timestamp:</u>
+            <u>Published Date:</u>
           </b>
         </p>
-        <p>{this.props.article.timestamp}</p>
+        <p>{this.props.article.date}</p>
         <div className="newsButtons">
           <button
             type="deleteNewsbutton"

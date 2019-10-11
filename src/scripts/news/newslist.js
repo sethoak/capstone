@@ -9,36 +9,49 @@ class NewsList extends Component {
 
   componentDidMount() {
     console.log("NEWS LIST: ComponentDidMount");
-    this.getData()
+    this.getData();
   }
 
-    getData = () => {
+  getData = () => {
     APImanager.getAll("articles").then(articles => {
-        console.log("am I getting articles", articles)
+      console.log("am I getting articles", articles);
       this.setState({
         articles: articles
       });
     });
-  }
+  };
 
-    deleteArticle = id => {
-      APImanager.delete("articles", id).then(() => {
-        APImanager.getAll("articles").then(newArticle => {
-          this.setState({
-            articles: newArticle
-          });
+  deleteArticle = id => {
+    APImanager.delete("articles", id).then(() => {
+      APImanager.getAll("articles").then(newArticle => {
+        this.setState({
+          articles: newArticle
         });
       });
-    };
+    });
+  };
 
   render() {
     console.log("NewsList: Render!!!!", this.state.articles);
 
     return (
       <>
-         <div>
-         <h2 className="newsHeader">Witchy News</h2>
-          {this.state.articles.map(article =>(
+        <div>
+          <h2 className="newsHeader">Witchy News</h2>
+          <section>
+            <button
+              type="button"
+              className="btn"
+              onClick={() => {
+                this.props.history.push("/news/new");
+              }}
+            >
+              Enter News Article
+            </button>
+          </section>
+        </div>
+        <div>
+          {this.state.articles.map(article => (
             <NewsCard
               key={article.id}
               article={article}
@@ -47,17 +60,6 @@ class NewsList extends Component {
             />
           ))}
         </div>
-        <section>
-          <button
-            type="button"
-            className="btn"
-            onClick={() => {
-              this.props.history.push("/news/new");
-            }}
-          >
-            Enter News Article
-          </button>
-        </section>
       </>
     );
   }

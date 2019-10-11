@@ -54,6 +54,7 @@ class NewsEditForm extends Component {
         <form>
           <fieldset>
             <div>
+              <label htmlFor="title">Title</label>
               <input
                 type="text"
                 required
@@ -62,8 +63,17 @@ class NewsEditForm extends Component {
                 id="title"
                 value={this.state.title}
               />
-              <label htmlFor="title">Title</label>
+              <label htmlFor="date">Date</label>
+              <input
+                type="date"
+                required
+                className="form-control"
+                onChange={this.handleFieldChange}
+                id="date"
+                value={this.state.date}
+              />
 
+              <label htmlFor="synopsis">Synopsis</label>
               <input
                 type="text"
                 required
@@ -71,8 +81,8 @@ class NewsEditForm extends Component {
                 id="synopsis"
                 value={this.state.synopsis}
               />
-              <label htmlFor="synopsis">Synopsis</label>
 
+              <label htmlFor="URL">URL</label>
               <input
                 type="URL"
                 required
@@ -80,7 +90,6 @@ class NewsEditForm extends Component {
                 id="URL"
                 value={this.state.URL}
               />
-              <label htmlFor="URL">URL</label>
             </div>
             <div>
               <button

@@ -19,8 +19,16 @@ export default {
             method: "DELETE",
         }).then(newObj => newObj.json())
     },
-    get(resource, id){
-        console.log("fire")
-        return fetch(`${url}/${resource}/${id}`).then(newObj => newObj.json())
+    put(resource, editObj){
+        return fetch(`${url}/${resource}/${editObj.id}`,{
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(editObj)
+            }).then(editObj => editObj.json())
     },
+    get(resource, id){
+        return fetch(`${url}/${resource}/${id}`).then(newObj => newObj.json())
+    }
 }

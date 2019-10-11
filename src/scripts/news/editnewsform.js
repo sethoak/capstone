@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import APIManager from "../../modules/apimanager"
 
 class NewsEditForm extends Component {
   state = {
@@ -27,16 +28,16 @@ class NewsEditForm extends Component {
       timestamp: timestamp
     };
 
-    APIManager.edit(editedArticle).then(() => this.props.history.push("/news"));
+    APIManager.put("articles", editedArticle).then(() => this.props.history.push("/news"));
   };
 
   componentDidMount() {
-    APImanager.get(this.props.match.params.newsId).then(news => {
+    APIManager.get("articles", this.props.match.params.articlesId).then(article => {
       const timestamp = new Date().toLocaleString();
       this.setState({
-        title: news.title,
-        synopsis: news.synopsis,
-        URL: news.URL,
+        title: article.title,
+        synopsis: article.synopsis,
+        URL: article.URL,
         timestamp: timestamp,
         loadingStatus: false
       });

@@ -6,7 +6,7 @@ class NewsEditForm extends Component {
     title: "",
     synopsis: "",
     URL: "",
-    timestamp: "",
+    date: "",
     loadingStatus: true
   };
 
@@ -19,13 +19,12 @@ class NewsEditForm extends Component {
   updateExistingArticle = evt => {
     evt.preventDefault();
     this.setState({ loadingStatus: true });
-    const timestamp = new Date().toLocaleString();
     const editedArticle = {
       id: this.props.match.params.articleId,
       title: this.state.title,
       synopsis: this.state.synopsis,
       URL: this.state.URL,
-      timestamp: timestamp
+      date: this.state.date
     };
 
     APIManager.put("articles", editedArticle).then(() =>

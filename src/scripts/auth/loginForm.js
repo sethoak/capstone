@@ -23,11 +23,7 @@ export default class LoginForm extends Component {
         user.password === this.state.password
       ) {
         console.log("here");
-        let credentials = {
-          username: this.state.username,
-          password: this.state.password,
-          userId: user.id
-        };
+        let credentials = user.id
         let box = document.querySelector(".remember");
         if(box.checked === true){
           this.props.rememberMe(credentials);

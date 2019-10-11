@@ -18,5 +18,9 @@ export default {
         return fetch(`${url}/${resource}/${id}`,{
             method: "DELETE",
         }).then(newObj => newObj.json())
-    }
+    },
+    get(resource, id){
+        console.log("fire")
+        return fetch(`${url}/${resource}/${id}`).then(newObj => newObj.json())
+    },
 }

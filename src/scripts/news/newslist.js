@@ -37,6 +37,7 @@ class NewsList extends Component {
     return (
       <>
          <div>
+         <h2 className="newsHeader">Witchy News</h2>
           {this.state.articles.map(article =>(
             <NewsCard
               key={article.id}

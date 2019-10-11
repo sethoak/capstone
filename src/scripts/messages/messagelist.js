@@ -37,7 +37,7 @@ export default class MessageList extends Component {
     // console.log("firing new article");
     if (sessionStorage.getItem("credentials") !== null) {
       let sessionUserId = parseInt(sessionStorage.getItem("credentials"));
-      console.log(sessionUserId)
+      console.log(sessionUserId);
       let newMessage = {
         text: this.state.message,
         userId: sessionUserId,
@@ -48,11 +48,11 @@ export default class MessageList extends Component {
         .then(() => this.props.history.push("/chat"));
     } else {
       let localUserId = parseInt(localStorage.getItem("credentials"));
-      console.log(localUserId)
+      console.log(localUserId);
       let newMessage = {
         text: this.state.message,
         userId: localUserId,
-        date: dateNow,
+        date: dateNow
       };
       APIManager.post("messages", newMessage)
         .then(() => this.props.history.push("/"))
@@ -76,7 +76,8 @@ export default class MessageList extends Component {
           <button type="button" onClick={this.newMessage}>
             Send
           </button>
-          {this.state.messages.map(message => (
+          {this.state.messages.map(
+            message => (
               console.log(message),
               (
                 <MessageCard

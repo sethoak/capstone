@@ -5,7 +5,6 @@ import "./App.css";
 import ApplicationViews from "./scripts/applicationViews/applicationviews";
 import NavBar from "./scripts/nav/navbar";
 import { Route, withRouter, Redirect} from "react-router-dom";
-
 class App extends Component {
   state = {
     user: ""

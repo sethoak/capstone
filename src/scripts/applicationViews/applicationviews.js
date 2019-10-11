@@ -8,6 +8,12 @@ import MessageList from "../messages/messagelist";
 import NewsList from "../news/newslist";
 import NewsForm from "../news/newsform"
 import NewsEditForm from  "../news/editnewsform"
+import EventsEditForm from "../events/editeventform"
+import EventForm from "../events/eventform"
+import EventsList from "../events/eventlist"
+import TaskList from "../tasks/tasklist"
+import TaskEditForm from "../tasks/taskeditform"
+import TaskForm from "../tasks/taskform"
 
 export default class ApplicationViews extends Component {
   isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
@@ -117,6 +123,72 @@ export default class ApplicationViews extends Component {
             }
           }}
         />
+       <Route
+          exact
+          path="/events"
+          render={props => {
+            if (this.isAuthenticated || this.isRemebered) {
+              return <EventsList {...props} />;
+            } else {
+              return <Redirect to="/login" />;
+            }
+          }}
+        />
+        <Route
+          exact
+          path="/events/new"
+          render={props => {
+            if (this.isAuthenticated || this.isRemebered) {
+              return <EventForm {...props} />;
+            } else {
+              return <Redirect to="/login" />;
+            }
+          }}
+        />
+        <Route
+          exact
+          path="/events/:eventId(\d+)/edit"
+          render={props => {
+            if (this.isAuthenticated || this.isRemebered) {
+              return <EventsEditForm {...props} />;
+            } else {
+              return <Redirect to="/login" />;
+            }
+          }}
+          />
+                <Route
+          exact
+          path="/tasks"
+          render={props => {
+            if (this.isAuthenticated || this.isRemebered) {
+              return <TaskList {...props} />;
+            } else {
+              return <Redirect to="/login" />;
+            }
+          }}
+        />
+        <Route
+          exact
+          path="/tasks/new"
+          render={props => {
+            if (this.isAuthenticated || this.isRemebered) {
+              return <TaskForm {...props} />;
+            } else {
+              return <Redirect to="/login" />;
+            }
+          }}
+        />
+        <Route
+          exact
+          path="/tasks/:taskId(\d+)/edit"
+          render={props => {
+            if (this.isAuthenticated || this.isRemebered) {
+              return <TaskEditForm {...props} />;
+            } else {
+              return <Redirect to="/login" />;
+            }
+          }}
+          />
       </React.Fragment>
     );
   }

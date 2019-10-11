@@ -80,7 +80,7 @@ class EventsEditForm extends Component {
                 value={this.state.location}
               />
 
-              <label htmlFor="URL">Time</label>
+              <label htmlFor="time">Time</label>
               <input
                 type="time"
                 required

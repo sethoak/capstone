@@ -50,6 +50,11 @@ class NavBar extends Component {
                   </Link>
                 </li>
                 <li>
+                  <Link className="nav-link" to="/tasks">
+                    Tasks
+                  </Link>
+                </li>
+                <li>
                   <Link className="nav-link" to="/events">
                     Gatherings
                   </Link>

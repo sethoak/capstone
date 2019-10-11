@@ -1,39 +1,54 @@
 import React, { Component } from "react";
-import "./news.css"
+import "./news.css";
 
 class NewsCard extends Component {
   render() {
-      console.log("renderingggg")
+    console.log("renderingggg");
     return (
-      <div class="newsContainer">
+      <div className="newsContainer">
         <div className="articleContainer"></div>
         <h2 className="newsHeader">Witchy News:</h2>
-        <p className="sectionTitle"><b><u>Title:</u></b></p>
+        <p className="sectionTitle">
+          <b>
+            <u>Title:</u>
+          </b>
+        </p>
         <p>{this.props.article.title}</p>
-        <p className="sectionTitle"><b><u>Synopsis:</u></b></p>
-        <p>{this.props.article.snynopsis}</p>
-        <p className="sectionTitle"><b><u>URL:</u></b></p>
-        <p>{this.props.article.url}</p>
-        <p className="sectionTitle"><b><u>Timestamp:</u></b></p>
+        <p className="sectionTitle">
+          <b>
+            <u>Synopsis:</u>
+          </b>
+        </p>
+        <p>{this.props.article.synopsis}</p>
+        <p className="sectionTitle">
+          <b>
+            <u>URL:</u>
+          </b>
+        </p>
+        <p>{this.props.article.URL}</p>
+        <p className="sectionTitle">
+          <b>
+            <u>Timestamp:</u>
+          </b>
+        </p>
         <p>{this.props.article.timestamp}</p>
         <div className="newsButtons">
-        <button
-          type="deleteNewsbutton"
-          onClick={() => this.props.deleteArticle(this.props.article.id)}
-        >
-          Delete
-        </button>
-        <button
-          type="editNewsbutton"
-          onClick={() => {
-            this.props.history.push(`/news/${this.props.article.id}/edit`);
-          }}
-        >
-          Edit
-        </button>
+          <button
+            type="deleteNewsbutton"
+            onClick={() => this.props.deleteArticle(this.props.article.id)}
+          >
+            Delete
+          </button>
+          <button
+            type="editNewsbutton"
+            onClick={() => {
+              this.props.history.push(`/news/${this.props.article.id}/edit`);
+            }}
+          >
+            Edit
+          </button>
         </div>
-        </div>
-  
+      </div>
     );
   }
 }

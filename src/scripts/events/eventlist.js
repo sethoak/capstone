@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import APImanager from "../../modules/apimanager";
 import EventsCard from "../../scripts/events/eventcard";
 
+
 class EventsList extends Component {
   state = {
     events: []

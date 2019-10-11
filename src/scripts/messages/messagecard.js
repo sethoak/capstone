@@ -22,10 +22,12 @@ export default class MessageCard extends Component {
     render() {
         return (
             <div className="mainMessageContainer">
-                <div>
+                <div className="messageEntry">
+                    <div className="arrow bottom right"></div>
                     <h5>{this.state.user.username}</h5>
                     <p>{this.props.message.text}</p>
-                    <p>{this.props.message.date}</p>
+                    <p>{this.props.message.text}</p>
+                    <div class="speech-bubble-ds-arrow"></div>
                 </div>
             </div>
         )

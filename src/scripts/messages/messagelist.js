@@ -66,7 +66,7 @@ export default class MessageList extends Component {
   render() {
     return (
       <>
-        <div>
+        <div className="messageBox">
           <label className="messageLabel">Write a new Messages</label>
           <input
             id="message"

@@ -69,7 +69,7 @@ getData = e => {
                 console.log(user)
                 if(user.username !== this.state.username){
                     // sessionStorage.clear()
-                    let credentials = {username: this.state.username, password: this.state.password, userId: user.userId}
+                    let credentials = user.id
                     this.props.setUser(credentials);
                     this.props.history.push("/");
                 } else {

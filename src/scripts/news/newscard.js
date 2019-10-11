@@ -7,7 +7,6 @@ class NewsCard extends Component {
     return (
       <div className="newsContainer">
         <div className="articleContainer"></div>
-        <h2 className="newsHeader">Witchy News:</h2>
         <p className="sectionTitle">
           <b>
             <u>Title:</u>

@@ -42,7 +42,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <NavBar user={this.state.user} clearUser={this.clearUser}/>
+        <NavBar user={this.state.user} clearUser={this.clearUser} {...this.props}/>
         <ApplicationViews rememberMe={this.rememberMe} user={this.state.user} setUser={this.setUser} />
       </>
     );

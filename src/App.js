@@ -7,7 +7,8 @@ import NavBar from "./scripts/nav/navbar";
 import { Route, withRouter, Redirect} from "react-router-dom";
 class App extends Component {
   state = {
-    user: ""
+    user: "",
+    currentUser: ""
   };
 
   isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
@@ -16,16 +17,29 @@ class App extends Component {
   setUser = authUser => {
     sessionStorage.setItem("credentials", JSON.stringify(authUser));
     this.setState({
-      user: this.isAuthenticated()
+      user: true,
+      currentUser: this.getUser()
+
     });
   };
+
+  getUser = () => {
+    if(this.isAuthenticated){
+      return parseInt(sessionStorage.getItem("credentials"))
+    } else if(this.isRemembered){
+      return parseInt(localStorage.getItem("credentials"))
+    } else {
+      return <Redirect to="/login" />
+    }
+  }
 
   rememberMe = user => {
     localStorage.setItem(
       "credentials",
       JSON.stringify(user))
       this.setState({
-        user: this.isRemembered()
+        user: true,
+        currentUser: this.setUser()
       });
   }
 
@@ -42,7 +56,7 @@ class App extends Component {
     return (
       <>
         <NavBar user={this.state.user} clearUser={this.clearUser} {...this.props}/>
-        <ApplicationViews rememberMe={this.rememberMe} user={this.state.user} setUser={this.setUser} />
+        <ApplicationViews currentUser={this.state.currentUser} rememberMe={this.rememberMe} user={this.state.user} setUser={this.setUser} />
       </>
     );
   }

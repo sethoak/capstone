@@ -79,7 +79,7 @@ export default class ApplicationViews extends Component {
           path="/chat"
           render={props => {
             if (this.isAuthenticated || this.isRemebered) {
-              return <MessageList {...props} />;
+              return <MessageList currentUser={this.props.currentUser} {...props} />;
             } else {
               return <Redirect to="/login" />;
             }
@@ -90,7 +90,7 @@ export default class ApplicationViews extends Component {
           path="/news"
           render={props => {
             if (this.isAuthenticated || this.isRemebered) {
-              return <NewsList {...props} />;
+              return <NewsList currentUser={this.props.currentUser} {...props} />;
             } else {
               return <Redirect to="/login" />;
             }
@@ -101,7 +101,7 @@ export default class ApplicationViews extends Component {
           path="/news/new"
           render={props => {
             if (this.isAuthenticated || this.isRemebered) {
-              return <NewsForm {...props} />;
+              return <NewsForm currentUser={this.props.currentUser} {...props} />;
             } else {
               return <Redirect to="/login" />;
             }
@@ -112,7 +112,7 @@ export default class ApplicationViews extends Component {
           path="/news/:articleId(\d+)/edit"
           render={props => {
             if (this.isAuthenticated || this.isRemebered) {
-              return <NewsEditForm {...props} />;
+              return <NewsEditForm currentUser={this.props.currentUser} {...props} />;
             } else {
               return <Redirect to="/login" />;
             }
@@ -123,7 +123,7 @@ export default class ApplicationViews extends Component {
           path="/chat/:messageId(\d+)/edit"
           render={props => {
             if (this.isAuthenticated || this.isRemebered) {
-              return <MessageEditForm {...props} />;
+              return <MessageEditForm currentUser={this.props.currentUser} {...props} />;
             } else {
               return <Redirect to="/login" />;
             }

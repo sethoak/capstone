@@ -38,7 +38,7 @@ export default class MessageCard extends Component {
               <h5>{this.props.message.user.username}</h5>
               <p>{this.props.message.text}</p>
               <p>{this.props.message.date}</p>
-              <button type="button" onClick={() => this.props.history.push(`/chat/${this.props.currentUser}/edit`)}>Edit</button>
+              <button type="button" onClick={() => this.props.history.push(`/chat/${this.props.message.id}/edit`)}>Edit</button>
               <div className="speech-bubble-ds-arrow"></div>
             </div>
           </div>

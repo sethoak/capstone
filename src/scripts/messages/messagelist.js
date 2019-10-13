@@ -10,7 +10,8 @@ export default class MessageList extends Component {
     message: ""
   };
   getData = () => {
-    APIManager.getAll("messages").then(messages =>
+    console.log(this.props.currentUser)
+    APIManager.getMessages(this.props.currentUser).then(messages =>
       this.setState({
         messages: messages
       })
@@ -54,7 +55,7 @@ export default class MessageList extends Component {
         date: dateNow
       };
       APIManager.post("messages", newMessage)
-        .then(() => this.props.history.push("/"))
+        // .then(() => this.props.history.push("/"))
         .then(() => this.props.history.push("/chat"));
     }
   };
@@ -76,17 +77,15 @@ export default class MessageList extends Component {
             Send
           </button>
           {this.state.messages.map(
-            message => (
-              console.log(message),
-              (
+            message =>
                 <MessageCard
                   key={message.id}
+                  getData={this.getData}
+                  currentUser={this.props.currentUser}
                   message={message}
                   messages={this.state.messages}
                   {...this.props}
                 />
-              )
-            )
           )}
         </div>
       </>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link, withRouter, Redirect } from "react-router-dom";
 import "./navbar.css";
 
 class NavBar extends Component {
@@ -18,25 +18,29 @@ class NavBar extends Component {
         </h1>
         <nav>
           <ul className="container">
-            <li>
+            { this.props.user ? (
+
+              
+              <li>
               <Link className="nav-link" to="/">
                 Home
               </Link>
             </li>
+            ) : <Redirect to="/login" />}
             {this.props.user ? (
               <li>
                 <Link className="nav-link" to="/cauldron">
-                  Cauldron
+                  My Cauldron
                 </Link>
               </li>
-            ) : null}
+            ) : <Redirect to="/login" />}
             {this.props.user ? (
               <li>
                 <Link className="nav-link" to="/coven">
                   Coven
                 </Link>
               </li>
-            ) : null}
+            ) : <Redirect to="/login" />}
             {this.props.user ? (
               <>
                 <li>
@@ -65,13 +69,7 @@ class NavBar extends Component {
                   </span>
                 </li>
               </>
-            ) : (
-              <li>
-                <Link className="nav-link" to="/login">
-                  Login/Register
-                </Link>
-              </li>
-            )}
+            ) : null}
           </ul>
         </nav>
       </header>

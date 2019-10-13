@@ -44,7 +44,7 @@ export default class MessageList extends Component {
         date: dateNow
       };
       APIManager.post("messages", newMessage)
-        // .then(() => this.props.history.push("/"))
+        .then(() => this.props.history.push("/"))
         .then(() => this.props.history.push("/chat"));
     } else {
       let localUserId = parseInt(localStorage.getItem("credentials"));

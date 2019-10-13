@@ -33,9 +33,8 @@ class MessageEditForm extends Component {
       userId: this.state.currentUser,
       date: dateNow
     };
-    APIManager.putMessage("messages", this.state.message.id, editedMessage).then(() =>
-      this.props.history.push("/chat")
-    );
+    APIManager.putMessage("messages", this.state.message.id, editedMessage).then(this.props.history.push("/"))
+    .then(this.props.history.push("/chat"))
   };
 
   componentDidMount() {

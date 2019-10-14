@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-import APIManager from "../../modules/apimanager"
+import APIManager from "../../modules/apimanager";
 import "./task.css";
+import { Button } from "reactstrap";
 
 class TaskCard extends Component {
   markComplete = () => {
     APIManager.get("task", this.props.task.id).then(task => {
       task.completed = true;
-    })
-  }
+    });
+  };
 
   render() {
     return (
@@ -37,24 +38,28 @@ class TaskCard extends Component {
           </b>
         </p>
         <p>{this.props.task.timeStamp}</p>
-        <p> Completed
+        <p>
+          {" "}
+          Completed
           <input type="checkbox" onClick={this.markComplete}></input>
         </p>
         <div className="taskButtons">
-          <button
+          <Button
             type="deleteTaskbutton"
+            color="danger"
             onClick={() => this.props.deleteTask(this.props.task.id)}
           >
             Delete
-          </button>
-          <button
+          </Button>
+          <Button
             type="editTaskbutton"
+            color="warning"
             onClick={() => {
               this.props.history.push(`/tasks/${this.props.task.id}/edit`);
             }}
           >
             Edit
-          </button>
+          </Button>
         </div>
       </div>
     );

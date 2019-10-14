@@ -9,19 +9,17 @@ class TaskList extends Component {
   };
 
   componentDidMount() {
-    console.log("TASKS LIST: ComponentDidMount");
     this.getData();
   }
 
   getData = () => {
     APImanager.getAll("tasks").then(tasks => {
-      console.log("am I getting tasks", tasks);
       this.setState({
         tasks: tasks
       });
     });
   };
-
+  
   deleteTask = id => {
     APImanager.delete("tasks", id).then(() => {
       APImanager.getAll("tasks").then(newTask => {
@@ -33,7 +31,6 @@ class TaskList extends Component {
   };
 
   render() {
-    console.log("TasksList: Render!!!!", this.state.tasks);
 
     return (
       <>

@@ -1,3 +1,14 @@
+![picture alt](/hocus-pocus.png "HexBook Social Media App")
+
+# Sons of Witches
+
+Group Project at the Nashville Software School
+
+- [Phil Grisold](https://github.com/Philgriswold)
+- [Seth Oakley](https://github.com/sethoak)
+- [Nick Wessel](https://github.com/wesseln1)
+- [Aryn Weatherly](https://github.com/Arynweatherly)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

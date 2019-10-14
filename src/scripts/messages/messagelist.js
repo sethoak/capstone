@@ -11,6 +11,7 @@ import {
 } from "reactstrap";
 // import { Link } from "react-router-dom"
 import "./message.css";
+import { Button } from "reactstrap";
 
 export default class MessageList extends Component {
   state = {
@@ -89,9 +90,9 @@ export default class MessageList extends Component {
                   />
                 </InputGroupAddon>
               </InputGroup>
-              <button type="button" onClick={this.newMessage}>
+              <Button type="button" color="primary" onClick={this.newMessage}>
                 Send
-              </button>
+              </Button>
               {this.state.messages.map(message => (
                 <MessageCard
                   key={message.id}

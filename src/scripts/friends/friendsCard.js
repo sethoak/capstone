@@ -16,19 +16,19 @@ export default class FriendCard extends Component {
     console.log(this.props.friend.user.username);
     return (
       <div>
-          <Card>
-            <CardImg
+        <Card>
+          <CardImg
             className="cardImg"
-              top
-              width="100%"
-              src="../../images/1.jpg"
-              alt="Card image cap"
-            />
-            <CardBody className="cardBody">
-              <CardTitle className="cardTitle">{this.props.friend.user.username}</CardTitle>
-              <Button>Curse 'em!</Button>
-            </CardBody>
-          </Card>
+            src={require("./witchIcon.png")}
+            alt="Card image cap"
+          />
+          <CardBody className="cardBody">
+            <CardTitle className="cardTitle">
+              {this.props.friend.user.username}
+            </CardTitle>
+            <Button color="primary">Curse 'em!</Button>
+          </CardBody>
+        </Card>
       </div>
     );
   }

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import APImanager from "../../modules/apimanager";
 import TaskCard from "../../scripts/tasks/taskcard";
-
+import { Button } from "reactstrap";
+import "./task.css";
 
 class TaskList extends Component {
   state = {
@@ -19,7 +20,7 @@ class TaskList extends Component {
       });
     });
   };
-  
+
   deleteTask = id => {
     APImanager.delete("tasks", id).then(() => {
       APImanager.getAll("tasks").then(newTask => {
@@ -31,21 +32,21 @@ class TaskList extends Component {
   };
 
   render() {
-
     return (
       <>
         <div>
           <h2 className="taskHeader">Task:</h2>
           <section>
-            <button
+            <Button
               type="button"
+              color="primary"
               className="btn"
               onClick={() => {
                 this.props.history.push("/tasks/new");
               }}
             >
               Enter Task
-            </button>
+            </Button>
           </section>
         </div>
         <div>

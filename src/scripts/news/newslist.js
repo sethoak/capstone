@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import APImanager from "../../modules/apimanager";
 import NewsCard from "../../scripts/news/newscard";
+import { Button } from "reactstrap";
 
 class NewsList extends Component {
   state = {
@@ -39,15 +40,16 @@ class NewsList extends Component {
         <div>
           <h2 className="newsHeader">Witchy News</h2>
           <section>
-            <button
+            <Button
               type="button"
+              color="primary"
               className="btn"
               onClick={() => {
                 this.props.history.push("/news/new");
               }}
             >
               Enter News Article
-            </button>
+            </Button>
           </section>
         </div>
         <div>

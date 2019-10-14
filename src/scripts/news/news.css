@@ -1,33 +1,39 @@
-
 .newsHeader {
-    background-color: black;
-    color: white;
-    font-family: 'Cinzel Decorative', cursive !important;
-    justify-content: center;
-    background: black;
-    font-size: 4em;
-    font-weight: normal;
-    text-align: center;
-    padding-left: 1%
+  background-color: black;
+  color: white;
+  font-family: "Cinzel Decorative", cursive !important;
+  justify-content: center;
+  background: black;
+  font-size: 4em;
+  font-weight: normal;
+  text-align: center;
+  padding-left: 1%;
 }
 .articleContainer {
-    text-align: left;
-    font-family: 'Cinzel Decorative', cursive !important;
-    padding-left: 1%;
-    margin-left:1%
-
+  text-align: left;
+  font-family: "Cinzel Decorative", cursive !important;
+  padding-left: 1%;
+  margin-left: 1%;
 }
 
 .newsSection {
-    display: flex !important;
-    flex-direction: column;
+  display: flex !important;
+  flex-direction: column;
 }
 
 .newsContainer {
-    margin-right: 20%;
-    margin-left: 19%;
-    justify-content: center;
+  margin-right: 20%;
+  margin-left: 19%;
+  justify-content: center;
+  background-color: #000;
+  border: outset 10px #674072;
+  margin: 1em;
+  width: 100%;
 }
 .sectionTitle {
-    align-content: left;
+  align-content: left;
+}
+
+.bigTitle {
+  font-size: 2em;
 }

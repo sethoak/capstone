@@ -29,7 +29,7 @@ class NavBar extends Component {
             ) : (
               <Redirect to="/login" />
             )}
-            {this.props.user ? (
+            {/* {this.props.user ? (
               <li>
                 <Link className="nav-link" to="/cauldron">
                   My Cauldron
@@ -37,7 +37,7 @@ class NavBar extends Component {
               </li>
             ) : (
               <Redirect to="/login" />
-            )}
+            )} */}
             {this.props.user ? (
               <li>
                 <Link className="nav-link" to="/coven">

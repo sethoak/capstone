@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import APImanager from "../../modules/apimanager";
 import EventsCard from "../../scripts/events/eventcard";
-
+import { Button } from "reactstrap";
+import "./event.css";
 
 class EventsList extends Component {
   state = {
@@ -40,15 +41,16 @@ class EventsList extends Component {
         <div>
           <h2 className="eventsHeader">Coven Gatherings</h2>
           <section>
-            <button
+            <Button
               type="button"
+              color="secondary"
               className="btn"
               onClick={() => {
                 this.props.history.push("/events/new");
               }}
             >
               Enter Gathering
-            </button>
+            </Button>
           </section>
         </div>
         <div>

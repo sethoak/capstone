@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./event.css";
+import { Button } from "reactstrap";
 
 class EventsCard extends Component {
   render() {
@@ -31,20 +32,22 @@ class EventsCard extends Component {
         </p>
         <p>{this.props.event.time}</p>
         <div className="eventsButtons">
-          <button
+          <Button
             type="deleteEventsbutton"
+            color="danger"
             onClick={() => this.props.deleteEvent(this.props.event.id)}
           >
             Delete
-          </button>
-          <button
+          </Button>
+          <Button
             type="editEventsbutton"
+            color="warning"
             onClick={() => {
               this.props.history.push(`/events/${this.props.event.id}/edit`);
             }}
           >
             Edit
-          </button>
+          </Button>
         </div>
       </div>
     );

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./news.css";
+import { Button } from "reactstrap";
 
 class NewsCard extends Component {
   render() {
@@ -9,10 +10,10 @@ class NewsCard extends Component {
         <div className="articleContainer"></div>
         <p className="sectionTitle">
           <b>
-            <u>Title:</u>
+            <u></u>
           </b>
         </p>
-        <p>{this.props.article.title}</p>
+        <p className="bigTitle">{this.props.article.title}</p>
         <p className="sectionTitle">
           <b>
             <u>Synopsis:</u>
@@ -32,20 +33,22 @@ class NewsCard extends Component {
         </p>
         <p>{this.props.article.date}</p>
         <div className="newsButtons">
-          <button
+          <Button
             type="deleteNewsbutton"
+            color="danger"
             onClick={() => this.props.deleteArticle(this.props.article.id)}
           >
             Delete
-          </button>
-          <button
+          </Button>
+          <Button
             type="editNewsbutton"
+            color="warning"
             onClick={() => {
               this.props.history.push(`/news/${this.props.article.id}/edit`);
             }}
           >
             Edit
-          </button>
+          </Button>
         </div>
       </div>
     );

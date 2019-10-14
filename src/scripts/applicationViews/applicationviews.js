@@ -15,6 +15,7 @@ import EventsList from "../events/eventlist"
 import TaskList from "../tasks/tasklist"
 import TaskEditForm from "../tasks/taskeditform"
 import TaskForm from "../tasks/taskform"
+import FriendList from "../friends/friendsList"
 
 export default class ApplicationViews extends Component {
   isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
@@ -28,7 +29,7 @@ export default class ApplicationViews extends Component {
           path="/"
           render={props => {
             if (this.isAuthenticated || this.isRemebered) {
-              return <Home />;
+              return <Home currentUser={this.props.currentUser} {...props}/>;
             } else {
               return <Redirect to="/login" />;
             }
@@ -201,6 +202,17 @@ export default class ApplicationViews extends Component {
             }
           }}
           />
+                <Route
+          exact
+          path="/coven"
+          render={props => {
+            if (this.isAuthenticated || this.isRemebered) {
+              return <FriendList currentUser={this.props.currentUser} {...props} />;
+            } else {
+              return <Redirect to="/login" />;
+            }
+          }}
+        />
       </React.Fragment>
     );
   }

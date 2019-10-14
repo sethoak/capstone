@@ -1,6 +1,14 @@
 import APIManager from "../../modules/apimanager";
 import React, { Component } from "react";
 import MessageCard from "./messagecard";
+import {
+  CardBody,
+  Card,
+  Input,
+  InputGroup,
+  InputGroupAddon,
+  InputGroupText
+} from "reactstrap";
 // import { Link } from "react-router-dom"
 import "./message.css";
 
@@ -10,7 +18,7 @@ export default class MessageList extends Component {
     message: ""
   };
   getData = () => {
-    console.log(this.props.currentUser)
+    console.log(this.props.currentUser);
     APIManager.getMessages(this.props.currentUser).then(messages =>
       this.setState({
         messages: messages
@@ -66,18 +74,25 @@ export default class MessageList extends Component {
   render() {
     return (
       <>
-        <div className="messageBox">
-          <label className="messageLabel">Write a new Messages</label>
-          <input
-            id="message"
-            type="text"
-            onChange={this.handleFieldChange}
-          ></input>
-          <button type="button" onClick={this.newMessage}>
-            Send
-          </button>
-          {this.state.messages.map(
-            message =>
+        <div>
+          <Card className="messageBox">
+            <CardBody>
+              <label className="messageLabel">Write a new Messages</label>
+              <InputGroup>
+                <InputGroupAddon type="append" addonType="append">
+                  <InputGroupText>New Message:</InputGroupText>
+                  <Input
+                    className="messageInput"
+                    id="message"
+                    type="text"
+                    onChange={this.handleFieldChange}
+                  />
+                </InputGroupAddon>
+              </InputGroup>
+              <button type="button" onClick={this.newMessage}>
+                Send
+              </button>
+              {this.state.messages.map(message => (
                 <MessageCard
                   key={message.id}
                   getData={this.getData}
@@ -86,7 +101,9 @@ export default class MessageList extends Component {
                   messages={this.state.messages}
                   {...this.props}
                 />
-          )}
+              ))}
+            </CardBody>
+          </Card>
         </div>
       </>
     );

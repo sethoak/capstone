@@ -5,7 +5,7 @@ import APIManager from "../../modules/apimanager";
  class TaskForm extends Component {
   state = {
     name: "",
-    completed: "",
+    completed: false,
     completionDate: "",
     timeStamp: "",
     description: ""

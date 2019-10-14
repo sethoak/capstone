@@ -1,5 +1,17 @@
 import React, { Component } from "react";
+import "./message.css"
 import { Link } from "react-router-dom";
+import {
+  CardBody,
+  CardTitle,
+  Button,
+  Card,
+  CardText,
+  Input,
+  InputGroup,
+  InputGroupAddon,
+  InputGroupText
+} from "reactstrap";
 import "./message.css";
 
 export default class MessageCard extends Component {
@@ -33,24 +45,26 @@ export default class MessageCard extends Component {
       <>
         {this.state.userCard ? (
           <div className="mainMessageContainer">
-            <div className="messageEntry">
-              <div className="arrow bottom right"></div>
-              <h5>{this.props.message.user.username}</h5>
-              <p>{this.props.message.text}</p>
-              <p>{this.props.message.date}</p>
-              <button type="button" onClick={() => this.props.history.push(`/chat/${this.props.message.id}/edit`)}>Edit</button>
+            <Card className="messageEntry">
+              <CardBody className="arrow bottom right">
+              <CardTitle>{this.props.message.user.username}</CardTitle>
+              <CardText>{this.props.message.text}</CardText>
+              <CardText>{this.props.message.date}</CardText>
+              <Button type="button" color="primary" onClick={() => this.props.history.push(`/chat/${this.props.message.id}/edit`)}>Edit</Button>
+              </CardBody>
               <div className="speech-bubble-ds-arrow"></div>
-            </div>
+            </Card>
           </div>
         ) : (
           <div className="mainMessageContainer">
-            <div className="messageEntry">
-              <div className="arrow bottom right"></div>
-              <h5>{this.props.message.user.username}</h5>
-              <p>{this.props.message.text}</p>
-              <p>{this.props.message.date}</p>
+            <Card className="messageEntry">
+              <CardBody className="arrow bottom right">
+              <CardTitle>{this.props.message.user.username}</CardTitle>
+              <CardText>{this.props.message.text}</CardText>
+              <CardText>{this.props.message.date}</CardText>
+              </CardBody>
               <div className="speech-bubble-ds-arrow"></div>
-            </div>
+            </Card>
           </div>
         )}
       </>

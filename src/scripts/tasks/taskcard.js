@@ -1,9 +1,15 @@
 import React, { Component } from "react";
+import APIManager from "../../modules/apimanager"
 import "./task.css";
 
 class TaskCard extends Component {
+  markComplete = () => {
+    APIManager.get("task", this.props.task.id).then(task => {
+      task.completed = true;
+    })
+  }
+
   render() {
-    console.log("renderingggg");
     return (
       <div className="taskContainer">
         <p className="sectionTitle">
@@ -13,12 +19,6 @@ class TaskCard extends Component {
         </p>
         <p>{this.props.task.name}</p>
 
-        <p className="sectionTitle">
-          <b>
-            <u>Status:</u>
-          </b>
-        </p>
-        <p>{this.props.task.completed}</p>
         <p className="sectionTitle">
           <b>
             <u>Completion Date:</u>
@@ -37,6 +37,9 @@ class TaskCard extends Component {
           </b>
         </p>
         <p>{this.props.task.timeStamp}</p>
+        <p> Completed
+          <input type="checkbox" onClick={this.markComplete}></input>
+        </p>
         <div className="taskButtons">
           <button
             type="deleteTaskbutton"

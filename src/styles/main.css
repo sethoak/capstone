@@ -1,6 +1,6 @@
 h1 {
-    font-family: 'Cinzel Decorative', cursive !important;
+  font-family: "Cinzel Decorative", cursive !important;
 }
 body {
-    background-image: url(src/images/1.jpg)
+  background-image: url(src/images/1.jpg);
 }

@@ -16,6 +16,13 @@ h2 {
   background-color: #ff965a;
 }
 
+#parallax1 {
+  background-image: url(../images/homeImage.PNG);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
 #parallax1 p {
   color: #fff;
 }

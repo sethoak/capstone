@@ -6,9 +6,7 @@ class Home extends Component {
     return (
       <>
         <div className="spacer s0"></div>
-        <div id="parallax1" className="parallaxParent">
-          Try It Before You Buy It
-        </div>
+        <div id="parallax1" className="parallaxParent"></div>
         <div className="spacer s1">
           <div className="box2 blue">
             <p>Text goes here</p>

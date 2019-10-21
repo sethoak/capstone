@@ -1,3 +1,6 @@
+h2 {
+  font-family: "Rubik", sans-serif;
+}
 .parallaxParent {
   height: 100vh;
   overflow: hidden;
@@ -11,4 +14,12 @@
 #parallax1,
 #parallax3 {
   background-color: #ff965a;
+}
+
+#parallax1 p {
+  color: #fff;
+}
+
+#box2 blue {
+  font-family: "Rubik", sans-serif;
 }

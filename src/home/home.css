@@ -8,6 +8,7 @@
   top: -100%;
 }
 
-#parallax1 {
-  background-color: #094;
+#parallax1,
+#parallax3 {
+  background-color: #ff965a;
 }

@@ -58,9 +58,9 @@ class NavBar extends Component {
                   </Link>
                 </li>
                 <li>
-                  <span className="nav-link" onClick={this.handleLogout}>
+                  <Link className="nav-link" onClick={this.handleLogout}>
                     Logout
-                  </span>
+                  </Link>
                 </li>
               </>
             ) : null}

@@ -11,19 +11,12 @@ class NavBar extends Component {
   render() {
     return (
       <header>
-        <div id="headerimage">
-          <h1 className="site-title">
-            HEXBook
-            <br />
-            <small>Connect with your fellow witches</small>
-          </h1>
-        </div>
         <nav>
           <ul className="container">
             {this.props.user ? (
               <li>
                 <Link className="nav-link" to="/">
-                  Home
+                  home
                 </Link>
               </li>
             ) : (
@@ -41,7 +34,7 @@ class NavBar extends Component {
             {this.props.user ? (
               <li>
                 <Link className="nav-link" to="/coven">
-                  Coven
+                  info
                 </Link>
               </li>
             ) : (
@@ -51,22 +44,17 @@ class NavBar extends Component {
               <>
                 <li>
                   <Link className="nav-link" to="/chat">
-                    Chat
+                    about
                   </Link>
                 </li>
                 <li>
                   <Link className="nav-link" to="/news">
-                    News
+                    try
                   </Link>
                 </li>
                 <li>
                   <Link className="nav-link" to="/tasks">
-                    Tasks
-                  </Link>
-                </li>
-                <li>
-                  <Link className="nav-link" to="/events">
-                    Gatherings
+                    buy
                   </Link>
                 </li>
                 <li>

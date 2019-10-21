@@ -1,0 +1,13 @@
+.parallaxParent {
+  height: 100vh;
+  overflow: hidden;
+}
+.parallaxParent > * {
+  height: 200%;
+  position: relative;
+  top: -100%;
+}
+
+#parallax1 {
+  background-image: url(../../assets/img/example_parallax_bg1.png);
+}

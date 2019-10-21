@@ -4,7 +4,8 @@ import "./App.css";
 // import { all } from 'q';
 import ApplicationViews from "./scripts/applicationViews/applicationviews";
 import NavBar from "./scripts/nav/navbar";
-import { Route, withRouter, Redirect} from "react-router-dom";
+import { Route, withRouter, Redirect } from "react-router-dom";
+
 class App extends Component {
   state = {
     user: "",
@@ -19,43 +20,49 @@ class App extends Component {
     this.setState({
       user: true,
       currentUser: this.getUser()
-
     });
   };
 
   getUser = () => {
-    if(this.isAuthenticated){
-      return parseInt(sessionStorage.getItem("credentials"))
-    } else if(this.isRemembered){
-      return parseInt(localStorage.getItem("credentials"))
+    if (this.isAuthenticated) {
+      return parseInt(sessionStorage.getItem("credentials"));
+    } else if (this.isRemembered) {
+      return parseInt(localStorage.getItem("credentials"));
     } else {
-      return <Redirect to="/login" />
+      return <Redirect to="/login" />;
     }
-  }
+  };
 
   rememberMe = user => {
-    localStorage.setItem(
-      "credentials",
-      JSON.stringify(user))
-      this.setState({
-        user: true,
-        currentUser: this.setUser()
-      });
-  }
+    localStorage.setItem("credentials", JSON.stringify(user));
+    this.setState({
+      user: true,
+      currentUser: this.setUser()
+    });
+  };
 
   clearUser = () => {
     sessionStorage.clear();
     localStorage.clear();
 
-		this.setState({
-			user: this.isAuthenticated()
-		});
+    this.setState({
+      user: this.isAuthenticated()
+    });
   };
   render() {
     return (
       <>
-        <NavBar user={this.state.user} clearUser={this.clearUser} {...this.props}/>
-        <ApplicationViews currentUser={this.state.currentUser} rememberMe={this.rememberMe} user={this.state.user} setUser={this.setUser} />
+        <NavBar
+          user={this.state.user}
+          clearUser={this.clearUser}
+          {...this.props}
+        />
+        <ApplicationViews
+          currentUser={this.state.currentUser}
+          rememberMe={this.rememberMe}
+          user={this.state.user}
+          setUser={this.setUser}
+        />
       </>
     );
   }

@@ -7,20 +7,15 @@ class Home extends Component {
       <>
         <div className="spacer s0"></div>
         <div id="parallax1" className="parallaxParent">
-          {/* <div style="background-image: url(../../assets/img/example_parallax_bg1.png);"></div> */}
+          Try It Before You Buy It
         </div>
         <div className="spacer s1">
           <div className="box2 blue">
-            <p>Content 1</p>
-            <a href="#" className="viewsource">
-              view source
-            </a>
+            <p>Text goes here</p>
           </div>
         </div>
         <div className="spacer s0"></div>
-        <div id="parallax2" className="parallaxParent">
-          {/* <div style="background-image: url(../../assets/img/example_parallax_bg2.png);"></div> */}
-        </div>
+        <div id="parallax2" className="parallaxParent"></div>
         <div className="spacer s1">
           <div className="box2 blue">
             <p>Content 2</p>
@@ -30,9 +25,7 @@ class Home extends Component {
           </div>
         </div>
         <div className="spacer s0"></div>
-        <div id="parallax3" className="parallaxParent">
-          {/* <div style="background-image: url(../../assets/img/example_parallax_bg3.png);"></div> */}
-        </div>
+        <div id="parallax3" className="parallaxParent"></div>
         <div className="spacer s2"></div>
       </>
     );

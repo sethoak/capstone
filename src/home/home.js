@@ -6,6 +6,8 @@ import Gal from "../images/gal.PNG";
 import Try from "../images/tryBefore.PNG";
 import FaceShape from "../images/faceshape.png";
 import Upload from "../images/upload.PNG";
+import Shades from "../images/selectShades.PNG";
+import Brands from "../images/selectBrand.PNG";
 
 class Home extends Component {
   render() {
@@ -109,7 +111,64 @@ class Home extends Component {
           </div>
           {/*ENDS wrapper3 div*/}
         </div>
-        <div id="wrapper4">{/*ENDS wrapper4 div*/}</div>
+        <div id="wrapper4">
+          <div class="nav">
+            <ul>
+              <li>home</li>
+              <li>info</li>
+              <li>TRY</li>
+              <li>buy</li>
+            </ul>
+            {/*ENDS nav div*/}
+          </div>
+          <div id="shadeSelection">
+            <picture>
+              <img src={Shades} />
+            </picture>
+          </div>
+          {/*ENDS wrapper4 div*/}
+        </div>
+        <div id="wrapper5">
+          <div id="selectBrand">
+            <picture>
+              <img src={Brands} />
+            </picture>
+          </div>
+          {/*ENDS wrapper5 div */}
+        </div>
+        <div id="wrapper6">
+          <div id="selection">
+            <div id="innerMenu">
+              <div class="nav">
+                <ul>
+                  <li>home</li>
+                  <li>info</li>
+                  <li>TRY</li>
+                  <li>buy</li>
+                </ul>
+                {/*ENDS nav div*/}
+              </div>
+              <div id="menuListDetails">
+                <ul>
+                  <li>Oakley</li>
+                  <ul>
+                    <li>Glasses One</li>
+                    <li>Glasses Two</li>
+                  </ul>
+                  <li>Gucci</li>
+                  <ul>
+                    <li>Glasses One</li>
+                    <li>Glasses Two</li>
+                  </ul>
+                </ul>
+                {/*ENDS menuListDetails div*/}
+              </div>
+              {/*ENDS innerMenu div*/}
+            </div>
+            {/*ENDS selection div*/}
+          </div>
+          {/*ENDS wrapper div*/}
+        </div>
       </>
     );
   }

@@ -79,3 +79,33 @@ h3 {
   justify-content: center;
   margin: 3%;
 }
+
+#wrapper4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#shadeSelection {
+  margin: 5%;
+}
+
+#selectBrand {
+  background-color: #ff965a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#innerMenu {
+  display: flex;
+  flex-direction: row;
+  margin: 2%;
+}
+
+#menuListDetails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 5%;
+}

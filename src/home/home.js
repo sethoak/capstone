@@ -15,7 +15,7 @@ class Home extends Component {
       <>
         <div id="wrapper1">
           <div id="col1">
-            <div class="nav">
+            <div className="nav">
               <ul>
                 <li className="active">HOME</li>
                 <li>info</li>
@@ -29,19 +29,19 @@ class Home extends Component {
           <div id="col2">
             <div id="slogan">
               <picture>
-                <img src={Logo} />
+                <img src={Logo} alt="Logo" />
               </picture>
               {/*ENDS slogan div*/}
               <div id="mainFooter">
                 <div id="icons">
                   <div id="mainPic">
                     <picture>
-                      <img src={MainFooter} />
+                      <img src={MainFooter} alt="Main footer image" />
                     </picture>
                   </div>
                   <div id="galPic">
                     <picture>
-                      <img src={Gal} />
+                      <img src={Gal} alt="picture of girl" />
                     </picture>
                     {/*ENDS galPic div*/}
                   </div>
@@ -72,7 +72,7 @@ class Home extends Component {
         </div>
         <div id="wrapper3">
           <div id="wrapper3col1">
-            <div class="nav">
+            <div className="nav">
               <ul>
                 <li>home</li>
                 <li>info</li>
@@ -91,20 +91,20 @@ class Home extends Component {
               </div>
               <ul id="headshapes">
                 <li>
-                  <img src={FaceShape} />
+                  <img src={FaceShape} alt="face shape" />
                 </li>
                 <li>
-                  <img src={FaceShape} />
+                  <img src={FaceShape} alt="face shape" />
                 </li>
                 <li>
-                  <img src={FaceShape} />
+                  <img src={FaceShape} alt="face shape" />
                 </li>
               </ul>
               {/*ENDS wrapper3content*/}
             </div>
             <div id="upload">
               <picture>
-                <img src={Upload} />
+                <img src={Upload} alt="upload" />
               </picture>
             </div>
             {/*ENDS wrapper3col2 div*/}
@@ -112,7 +112,7 @@ class Home extends Component {
           {/*ENDS wrapper3 div*/}
         </div>
         <div id="wrapper4">
-          <div class="nav">
+          <div className="nav">
             <ul>
               <li>home</li>
               <li>info</li>
@@ -123,7 +123,7 @@ class Home extends Component {
           </div>
           <div id="shadeSelection">
             <picture>
-              <img src={Shades} />
+              <img src={Shades} alt="shaes" />
             </picture>
           </div>
           {/*ENDS wrapper4 div*/}
@@ -131,7 +131,7 @@ class Home extends Component {
         <div id="wrapper5">
           <div id="selectBrand">
             <picture>
-              <img src={Brands} />
+              <img src={Brands} alt="brands" />
             </picture>
           </div>
           {/*ENDS wrapper5 div */}
@@ -139,7 +139,7 @@ class Home extends Component {
         <div id="wrapper6">
           <div id="selection">
             <div id="innerMenu">
-              <div class="nav">
+              <div className="nav">
                 <ul>
                   <li>home</li>
                   <li>info</li>

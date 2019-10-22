@@ -3,12 +3,14 @@ import "./home.css";
 import Logo from "../images/mainSlogan.PNG";
 import MainFooter from "../images/mainFooter.PNG";
 import Gal from "../images/gal.PNG";
+import Try from "../images/tryBefore.PNG";
+import FaceShape from "../images/faceshape.png";
 
 class Home extends Component {
   render() {
     return (
       <>
-        <div id="wrapper">
+        <div id="wrapper1">
           <div id="col1">
             <div class="nav">
               <ul>
@@ -55,6 +57,48 @@ class Home extends Component {
             {/*ENDS col3 div*/}
           </div>
           {/*ENDS wrapper div*/}
+        </div>
+        <div id="wrapper2">
+          <div id="wrapper2pic">
+            <picture>
+              <img src={Try} />
+            </picture>
+            {/*ENDS wrapper2pic div*/}
+          </div>
+          {/*ENDS wrapper2 div*/}
+        </div>
+        <div id="wrapper3">
+          <div id="wrapper3col1">
+            <div class="nav">
+              <ul>
+                <li>home</li>
+                <li>info</li>
+                <li className="active">TRY</li>
+                <li>buy</li>
+              </ul>
+              {/*ENDS nav div*/}
+            </div>
+            {/*ENDS wrapper3col1 div*/}
+          </div>
+          <div id="wrapper3col2">
+            <div id="wrapper3content">
+              <div id="selectHead">
+                <h3>SELECT YOUR HEAD SHAPE</h3>
+              </div>
+              <ul id="headshapes">
+                <li>
+                  <img src={FaceShape} />
+                </li>
+                <li>
+                  <img src={FaceShape} />
+                </li>
+                <li>
+                  <img src={FaceShape} />
+                </li>
+              </ul>
+            </div>
+          </div>
+          {/*ENDS wrapper3 div*/}
         </div>
       </>
     );

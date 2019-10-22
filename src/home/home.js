@@ -1,30 +1,35 @@
 import React, { Component } from "react";
 import "./home.css";
+import Logo from "../images/mainSlogan.PNG";
 
 class Home extends Component {
   render() {
     return (
       <>
-        <div className="spacer s0"></div>
-        <div id="parallax1" className="parallaxParent"></div>
-        <div className="spacer s1">
-          <div className="box2 blue">
-            <p>Text goes here</p>
+        <div id="wrapper">
+          <div id="col1">
+            <div class="nav">
+              <ul>
+                <li>HOME</li>
+                <li>info</li>
+                <li>about</li>
+                <li>buy</li>
+              </ul>
+            </div>
+          </div>
+          <div id="col2">
+            <div id="slogan">
+              <picture>
+                <img src={Logo} />
+              </picture>
+            </div>
+          </div>
+          <div id="col3">
+            <div id="login">
+              <p>login / register</p>
+            </div>
           </div>
         </div>
-        <div className="spacer s0"></div>
-        <div id="parallax2" className="parallaxParent"></div>
-        <div className="spacer s1">
-          <div className="box2 blue">
-            <p>Content 2</p>
-            <a href="#" className="viewsource">
-              view source
-            </a>
-          </div>
-        </div>
-        <div className="spacer s0"></div>
-        <div id="parallax3" className="parallaxParent"></div>
-        <div className="spacer s2"></div>
       </>
     );
   }

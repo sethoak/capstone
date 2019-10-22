@@ -1,32 +1,19 @@
-h2 {
-  font-family: "Rubik", sans-serif;
-}
-.parallaxParent {
-  height: 100vh;
-  overflow: hidden;
-}
-.parallaxParent > * {
-  height: 200%;
-  position: relative;
-  top: -100%;
-}
-
-#parallax1,
-#parallax3 {
+#wrapper {
+  display: flex;
+  flex-direction: row;
   background-color: #ff965a;
 }
-
-#parallax1 {
-  background-image: url(../images/homeImage.PNG);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+#col1 {
+  width: 31.333333333%;
+  margin: 10px 1%;
 }
 
-#parallax1 p {
-  color: #fff;
+#col2 {
+  width: 31.333333333%;
+  margin: 10px 1%;
 }
 
-#box2 blue {
-  font-family: "Rubik", sans-serif;
+col3 {
+  width: 31.333333333%;
+  margin: 10px 1%;
 }

@@ -5,6 +5,7 @@ import MainFooter from "../images/mainFooter.PNG";
 import Gal from "../images/gal.PNG";
 import Try from "../images/tryBefore.PNG";
 import FaceShape from "../images/faceshape.png";
+import Upload from "../images/upload.PNG";
 
 class Home extends Component {
   render() {
@@ -84,6 +85,7 @@ class Home extends Component {
             <div id="wrapper3content">
               <div id="selectHead">
                 <h3>SELECT YOUR HEAD SHAPE</h3>
+                {/*ENDS selectHead div*/}
               </div>
               <ul id="headshapes">
                 <li>
@@ -96,10 +98,18 @@ class Home extends Component {
                   <img src={FaceShape} />
                 </li>
               </ul>
+              {/*ENDS wrapper3content*/}
             </div>
+            <div id="upload">
+              <picture>
+                <img src={Upload} />
+              </picture>
+            </div>
+            {/*ENDS wrapper3col2 div*/}
           </div>
           {/*ENDS wrapper3 div*/}
         </div>
+        <div id="wrapper4">{/*ENDS wrapper4 div*/}</div>
       </>
     );
   }

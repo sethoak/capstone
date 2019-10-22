@@ -72,3 +72,10 @@ h3 {
   align-items: center;
   justify-content: center;
 }
+
+#upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3%;
+}

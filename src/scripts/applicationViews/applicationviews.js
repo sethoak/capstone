@@ -4,6 +4,7 @@ import Home from "../../home/home";
 import Login from "../auth/login";
 import UserForm from "../auth/registerForm";
 import LoginForm from "../auth/loginForm";
+import ProductList from "../products/productList";
 
 export default class ApplicationViews extends Component {
   isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
@@ -67,6 +68,12 @@ export default class ApplicationViews extends Component {
             } else {
               return <Redirect to="/login" />;
             }
+          }}
+        />
+        <Route
+          path="/products"
+          render={props => {
+            return <ProductList {...props} />;
           }}
         />
       </React.Fragment>

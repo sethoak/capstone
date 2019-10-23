@@ -44,21 +44,20 @@ export default {
     return fetch(`${url}/${resource}/${id}`).then(newObj => newObj.json());
   },
   getMessages(userId) {
-      let userFriends = [];
-      return this.getFriends(userId)
+    let userFriends = [];
+    return this.getFriends(userId)
       .then(data => {
         data.forEach(obj => {
-            userFriends.push(obj.userId);
+          userFriends.push(obj.userId);
         });
       })
       .then(() => {
-
         return fetch(
-            `http://localhost:8088/messages/?&_sort=date&_order=asc&_expand=user`
-            ).then(response => response.json());
-        });
-    },
-    getFriends(user) {
+          `http://localhost:8088/messages/?&_sort=date&_order=asc&_expand=user`
+        ).then(response => response.json());
+      });
+  },
+  getFriends(user) {
     return fetch(
       `http://localhost:8088/friends/?initiatorId=${user}&_expand=user`
     ).then(response => response.json());

@@ -11,7 +11,7 @@ export default {
     }).then(newObj => newObj.json());
   },
 
-  getAll(resource) {
+  getAllSunglasses(resource) {
     return fetch(`${url}/${resource}`).then(newObj => newObj.json());
   },
   getAll(resource, obj) {

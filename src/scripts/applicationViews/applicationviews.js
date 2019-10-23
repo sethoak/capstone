@@ -24,7 +24,6 @@ export default class ApplicationViews extends Component {
             }
           }}
         />
-
         <Route
           exact
           path="/login"
@@ -73,7 +72,7 @@ export default class ApplicationViews extends Component {
         <Route
           path="/products"
           render={props => {
-            return <ProductList {...props} />;
+            return <ProductList />;
           }}
         />
       </React.Fragment>

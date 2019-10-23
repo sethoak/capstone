@@ -4,24 +4,24 @@ import API from "../../modules/apimanager";
 
 export default class ProductList extends Component {
   state = {
-    sunglasses: [],
     products: []
   };
 
   componentDidMount() {
     console.log("sunglasses list");
-    API.getAll().then(sunglasses => {
+    API.getAllSunglasses("products").then(products => {
       this.setState({
-        sunglasses: sunglasses
+        products: products
       });
     });
   }
 
   render() {
+    console.log("is it working?");
     return (
       <div className="sunglassContainer">
         {this.state.products.map(product => (
-          <ProductCard />
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
     );

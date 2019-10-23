@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-// import logo from './logo.svg';
 import "./App.css";
-// import { all } from 'q';
 import ApplicationViews from "./scripts/applicationViews/applicationviews";
 import NavBar from "./scripts/nav/navbar";
 import { Route, withRouter, Redirect } from "react-router-dom";

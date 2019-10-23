@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import "./productCard.css";
-import Image from "../../images/oakleyglasses_big.png";
+import Image from "../../images/oakleyglasses_small.png";
 
 export default class ProductCard extends Component {
   render() {
     console.log(this.props.product.id);
     return (
       <div id="wrapper">
-        <div id="col1">
+        <div id="column1">
           <div className="innerNav">
             <ul>
               <li>Oakley</li>
@@ -23,17 +23,17 @@ export default class ProductCard extends Component {
             </ul>
             {/*ENDS innerNav div*/}
           </div>
-          {/*ENDS col1*/}
+          {/*ENDS column1*/}
         </div>
 
-        <div id="col2">
+        <div id="column2">
           <div id="breadCrumbs">
             <p>OAKLEY > SNOWBOARD > MODEL X</p>
             {/*ENDS breadCrumbs div*/}
           </div>
           <div id="titleDescription">
             <div id="title">
-              <h4>{this.props.product.title}</h4>
+              <h4>{this.props.product.name}</h4>
               {/*ENDS title div*/}
             </div>
             <div id="description">
@@ -48,31 +48,30 @@ export default class ProductCard extends Component {
             </picture>
             {/*ENDS mainImage div*/}
           </div>
-          {/*ENDS col2 div*/}
+          <div id="mainFooter">
+            <div id="try">
+              <p>TRY THEM ON</p>
+              {/*ENDS try div*/}
+            </div>
+            <div id="storeLocator">
+              <p>STORE LOCATOR</p>
+              {/*ENDS storeLocator div*/}
+            </div>
+            {/*ENDS mainFooter div*/}
+          </div>
+          {/*ENDS column2 div*/}
         </div>
 
-        <div id="col3">
+        <div id="column3">
           <div id="sidePictures">
             <ul>
-              <li>model G</li>
-              <li>model T</li>
-              <li>model X</li>
+              <li>PIC model G</li>
+              <li>PIC model T</li>
+              <li>PIC model X</li>
             </ul>
             {/*ENDS sidePictures div*/}
           </div>
-          {/*ENDS col3 div*/}
-        </div>
-
-        <div id="mainFooter">
-          <div id="try">
-            <p>TRY THEM ON</p>
-            {/*ENDS try div*/}
-          </div>
-          <div id="storeLocator">
-            <p>STORE LOCATOR</p>
-            {/*ENDS storeLocator div*/}
-          </div>
-          {/*ENDS mainFooter div*/}
+          {/*ENDS column3 div*/}
         </div>
 
         {/*ENDS wrapper div*/}

@@ -10,8 +10,10 @@ export default {
       body: JSON.stringify(newObj)
     }).then(newObj => newObj.json());
   },
-
   getAllSunglasses(resource) {
+    return fetch(`${url}/${resource}`).then(newObj => newObj.json());
+  },
+  getSunglass(resource) {
     return fetch(`${url}/${resource}`).then(newObj => newObj.json());
   },
   getAll(resource, obj) {

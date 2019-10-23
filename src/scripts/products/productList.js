@@ -9,7 +9,7 @@ export default class ProductList extends Component {
 
   componentDidMount() {
     console.log("sunglasses list");
-    API.getAllSunglasses("products").then(products => {
+    API.getAll("products").then(products => {
       this.setState({
         products: products
       });

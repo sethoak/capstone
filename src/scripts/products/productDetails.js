@@ -14,8 +14,10 @@ import {
 
 export default class ProductDetails extends Component {
   state = {
-    name: ""
+    name: "",
+    product: ""
   };
+
   componentDidMount() {
     console.log("ProductDetails: ComponentDidMount");
     APIManager.get(this.props.product.id).then(product => {

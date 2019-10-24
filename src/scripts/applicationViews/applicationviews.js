@@ -82,9 +82,7 @@ export default class ApplicationViews extends Component {
           path="/products/:productId(\d+)"
           render={props => {
             return (
-              <ProductDetail
-                productId={parseInt(props.match.params.productId)}
-              />
+              <ProductDetail productId={parseInt(props.match.params.product)} />
             );
           }}
         />

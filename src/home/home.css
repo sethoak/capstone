@@ -25,7 +25,7 @@ h3 {
 }
 
 #mainPic {
-  margin: 33% auto;
+  padding-top: 26%;
 }
 
 #col3 {
@@ -107,5 +107,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 5%;
+}
+
+#productDisplay {
 }

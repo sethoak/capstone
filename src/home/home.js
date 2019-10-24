@@ -1,5 +1,15 @@
 import React, { Component } from "react";
+import {
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button
+} from "reactstrap";
 import "./home.css";
+import ProductList from "../scripts/products/productList";
 import Logo from "../images/mainSlogan.PNG";
 import MainFooter from "../images/mainFooter.PNG";
 import Gal from "../images/gal.PNG";
@@ -148,20 +158,11 @@ class Home extends Component {
                 </ul>
                 {/*ENDS nav div*/}
               </div>
-              <div id="menuListDetails">
-                <ul>
-                  <li>Oakley</li>
-                  <ul>
-                    <li>Glasses One</li>
-                    <li>Glasses Two</li>
-                  </ul>
-                  <li>Gucci</li>
-                  <ul>
-                    <li>Glasses One</li>
-                    <li>Glasses Two</li>
-                  </ul>
-                </ul>
-                {/*ENDS menuListDetails div*/}
+              <div id="productDisplay">
+                <Card>
+                  <ProductList />
+                </Card>
+                {/*ENDS productDisplay*/}
               </div>
               {/*ENDS innerMenu div*/}
             </div>

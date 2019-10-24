@@ -31,6 +31,7 @@ export default class ProductCard extends Component {
             <p>OAKLEY > SNOWBOARD > MODEL X</p>
             {/*ENDS breadCrumbs div*/}
           </div>
+          <div id="mainAreaContainer">
           <div id="titleDescription">
             <div id="title">
               <h4>{this.props.product.name}</h4>
@@ -47,6 +48,8 @@ export default class ProductCard extends Component {
               <img src={Image} />
             </picture>
             {/*ENDS mainImage div*/}
+            </div>
+          {/*ENDS mainAreaContainer div*/}
           </div>
           <div id="mainFooter">
             <div id="try">

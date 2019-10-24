@@ -61,6 +61,7 @@ h3 {
 #headshapes {
   display: flex;
   flex-direction: row;
+  margin: 1%;
 }
 
 #wrapper3content p {

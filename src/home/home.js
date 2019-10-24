@@ -36,32 +36,34 @@ class Home extends Component {
             </div>
             {/*ENDS col1 div*/}
           </div>
+
           <div id="col2">
             <div id="slogan">
               <picture>
                 <img src={Logo} alt="Logo" />
               </picture>
               {/*ENDS slogan div*/}
-              <div id="mainFooter">
-                <div id="icons">
-                  <div id="mainPic">
-                    <picture>
-                      <img src={MainFooter} alt="Main footer image" />
-                    </picture>
-                  </div>
-                  <div id="galPic">
-                    <picture>
-                      <img src={Gal} alt="picture of girl" />
-                    </picture>
-                    {/*ENDS galPic div*/}
-                  </div>
-                  {/*ENDS mainFooter div*/}
+            </div>
+            <div id="mainFooter">
+              <div id="icons">
+                <div id="mainPic">
+                  <picture>
+                    <img src={MainFooter} alt="Main footer image" />
+                  </picture>
+                </div>
+                <div id="galPic">
+                  <picture>
+                    <img src={Gal} alt="picture of girl" />
+                  </picture>
+                  {/*ENDS galPic div*/}
                 </div>
                 {/*ENDS icons div*/}
               </div>
+              {/*ENDS mainFooter div*/}
             </div>
             {/*ENDS col2 div*/}
           </div>
+
           <div id="col3">
             <div id="login">
               <p>login / register</p>

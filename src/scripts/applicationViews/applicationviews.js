@@ -71,13 +71,13 @@ export default class ApplicationViews extends Component {
           }}
         />
         <Route
+          exact
           path="/products"
           render={props => {
             return <ProductList />;
           }}
         />
         <Route
-          exact
           path="/products/:productId(\d+)"
           render={props => {
             return (

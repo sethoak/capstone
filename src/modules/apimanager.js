@@ -33,7 +33,10 @@ export default {
       body: JSON.stringify(editObj)
     }).then(editObj => editObj.json());
   },
-  get(resource, id) {
-    return fetch(`${url}/${resource}/${id}`).then(newObj => newObj.json());
+  get(id) {
+    return fetch(`${url}/products/${id}`).then(result => result.json());
   }
+  // get(resource, id) {
+  //   return fetch(`${url}/${resource}/${id}`).then(newObj => newObj.json());
+  // }
 };

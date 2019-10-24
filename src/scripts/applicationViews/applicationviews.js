@@ -71,7 +71,6 @@ export default class ApplicationViews extends Component {
           }}
         />
         <Route
-          exact
           path="/products"
           render={props => {
             return <ProductList />;

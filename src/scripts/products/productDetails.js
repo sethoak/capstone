@@ -1,12 +1,6 @@
 import React, { Component } from "react";
 import APIManager from "../../modules/apimanager";
 import "./productCard.css";
-import Image from "../../images/oakleyglasses_small.png";
-import Small1 from "../../images/small1.png";
-import Small2 from "../../images/small2.png";
-import Small3 from "../../images/small3.png";
-import Store from "../../images/storeLocator.png";
-import Sunglasses from "../../images/trySunglasses.png";
 
 export default class ProductDetails extends Component {
   state = {
@@ -15,7 +9,7 @@ export default class ProductDetails extends Component {
 
   componentDidMount() {
     console.log("ProductDetails: ComponentDidMount");
-    APIManager.get(this.product.id).then(product => {
+    APIManager.get(this.props.product).then(product => {
       this.setState({
         name: product.name
       });
@@ -25,76 +19,13 @@ export default class ProductDetails extends Component {
   render() {
     return (
       <>
-        <div id="column2">
-          <div id="breadCrumbs">
-            <p>
-              {this.props.product.name}>{this.props.product.name}
-            </p>
-            {/*ENDS breadCrumbs div*/}
+        <div className="card">
+          <div className="card-content">
+            <h3>
+              Name:{" "}
+              <span style={{ color: "darkslategrey" }}>{this.state.name}</span>
+            </h3>
           </div>
-          <div id="mainAreaContainer">
-            <div id="titleDescription">
-              <div id="title">
-                <h4>{this.props.product.name}</h4>
-                {/*ENDS title div*/}
-              </div>
-              <div id="description">
-                <p>{this.props.product.description}</p>
-                {/*ENDS description div*/}
-              </div>
-              <div id="details">
-                <ul>
-                  <li>face shape: {this.props.product.faceShape}</li>
-                  <li>uses: {this.props.product.uses}</li>
-                  <li>weight: {this.props.product.weight}</li>
-                  <li>color: {this.props.product.color}</li>
-                </ul>
-                {/*ENDS details div*/}
-              </div>
-              {/*ENDS titleDescription div*/}
-            </div>
-            <div id="mainImage">
-              <picture>
-                <img src={Image} />
-              </picture>
-              {/*ENDS mainImage div*/}
-            </div>
-            {/*ENDS mainAreaContainer div*/}
-          </div>
-          <div id="mainFooter">
-            <div id="try">
-              <p>
-                TRY THEM ON <img src={Sunglasses} />
-              </p>
-              {/*ENDS try div*/}
-            </div>
-            <div id="storeLocator">
-              <p>
-                STORE LOCATOR <img src={Store} />
-              </p>
-              {/*ENDS storeLocator div*/}
-            </div>
-            {/*ENDS mainFooter div*/}
-          </div>
-          {/*ENDS column2 div*/}
-        </div>
-
-        <div id="column3">
-          <div id="sidePictures">
-            <ul id="smallSidePictures">
-              <li>
-                <img src={Small1} />
-              </li>
-              <li>
-                <img src={Small2} />
-              </li>
-              <li>
-                <img src={Small3} />
-              </li>
-            </ul>
-            {/*ENDS sidePictures div*/}
-          </div>
-          {/*ENDS column3 div*/}
         </div>
       </>
     );

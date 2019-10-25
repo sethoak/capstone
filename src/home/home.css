@@ -8,15 +8,14 @@ h3 {
   background-color: #ff965a;
   flex-direction: row;
   justify-content: center;
+  padding-top: 0.5%;
 }
 #col1 {
   width: 25%;
-  margin: 10px 1%;
 }
 
 #col2 {
   width: 50%;
-  margin: 75px 1%;
 }
 
 #icons {
@@ -25,12 +24,15 @@ h3 {
 }
 
 #mainPic {
-  margin: 33% auto;
+  padding-top: 25%;
+}
+
+#galPic {
+  padding-top: 5%;
 }
 
 #col3 {
   width: 25%;
-  margin: 10px 1%;
 }
 
 .active {
@@ -61,6 +63,7 @@ h3 {
 #headshapes {
   display: flex;
   flex-direction: row;
+  margin: 1%;
 }
 
 #wrapper3content p {
@@ -87,7 +90,21 @@ h3 {
 }
 
 #shadeSelection {
+  display: flex;
+  flex-direction: column;
+}
+
+#shadeSlogan {
+  align-items: center;
+  justify-content: center;
+}
+#shadeSelection {
   margin: 5%;
+}
+
+#shadeColFlex {
+  display: flex;
+  flex-direction: row;
 }
 
 #selectBrand {
@@ -107,5 +124,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 5%;
+}
+
+#mainFooterHome {
 }

@@ -1,0 +1,52 @@
+#wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  width: 80%;
+}
+#column1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.innerNav {
+  background-color: #ebebeb;
+  padding: 5%;
+  width: 200px;
+  margin-left: 13%;
+}
+
+#column2 {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5% 0 5%;
+}
+
+#mainAreaContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+#description {
+  margin: 5% 0;
+}
+
+#column3 {
+  display: flex;
+  flex-direction: column;
+}
+
+#smallSidePictures li {
+  margin: 15% 0;
+}
+
+#mainFooter {
+  display: flex;
+  flex-direction: row;
+  margin: 5% 0;
+}
+
+#storeLocator {
+  margin-left: 40%;
+}

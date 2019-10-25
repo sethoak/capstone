@@ -10,8 +10,10 @@ export default {
       body: JSON.stringify(newObj)
     }).then(newObj => newObj.json());
   },
-
-  getAll(resource) {
+  getAllSunglasses(resource, id) {
+    return fetch(`${url}/${resource}/${id}`).then(newObj => newObj.json());
+  },
+  getSunglass(resource) {
     return fetch(`${url}/${resource}`).then(newObj => newObj.json());
   },
   getAll(resource, obj) {
@@ -31,36 +33,10 @@ export default {
       body: JSON.stringify(editObj)
     }).then(editObj => editObj.json());
   },
-  putMessage(resource, messageID, editObj) {
-    return fetch(`${url}/${resource}/${messageID}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(editObj)
-    }).then(editObj => editObj.json());
-  },
-  get(resource, id) {
-    return fetch(`${url}/${resource}/${id}`).then(newObj => newObj.json());
-  },
-  getMessages(userId) {
-      let userFriends = [];
-      return this.getFriends(userId)
-      .then(data => {
-        data.forEach(obj => {
-            userFriends.push(obj.userId);
-        });
-      })
-      .then(() => {
-       
-        return fetch(
-            `http://localhost:8088/messages/?&_sort=date&_order=asc&_expand=user`
-            ).then(response => response.json());
-        });
-    },
-    getFriends(user) {
-    return fetch(
-      `http://localhost:8088/friends/?initiatorId=${user}&_expand=user`
-    ).then(response => response.json());
+  get(id) {
+    return fetch(`${url}/products/${id}`).then(result => result.json());
   }
+  // get(resource, id) {
+  //   return fetch(`${url}/${resource}/${id}`).then(newObj => newObj.json());
+  // }
 };

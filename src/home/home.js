@@ -1,5 +1,15 @@
 import React, { Component } from "react";
+import {
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button
+} from "reactstrap";
 import "./home.css";
+import ProductList from "../scripts/products/productList";
 import Logo from "../images/mainSlogan.PNG";
 import MainFooter from "../images/mainFooter.PNG";
 import Gal from "../images/gal.PNG";
@@ -8,6 +18,7 @@ import FaceShape from "../images/faceshape.png";
 import Upload from "../images/upload.PNG";
 import Shades from "../images/selectShades.PNG";
 import Brands from "../images/selectBrand.PNG";
+import OakleyGlasses from "../../src/images/oakleyglasses_small.png";
 
 class Home extends Component {
   render() {
@@ -26,32 +37,34 @@ class Home extends Component {
             </div>
             {/*ENDS col1 div*/}
           </div>
+
           <div id="col2">
             <div id="slogan">
               <picture>
                 <img src={Logo} alt="Logo" />
               </picture>
               {/*ENDS slogan div*/}
-              <div id="mainFooter">
-                <div id="icons">
-                  <div id="mainPic">
-                    <picture>
-                      <img src={MainFooter} alt="Main footer image" />
-                    </picture>
-                  </div>
-                  <div id="galPic">
-                    <picture>
-                      <img src={Gal} alt="picture of girl" />
-                    </picture>
-                    {/*ENDS galPic div*/}
-                  </div>
-                  {/*ENDS mainFooter div*/}
+            </div>
+            <div id="mainFooterHome">
+              <div id="icons">
+                <div id="mainPic">
+                  <picture>
+                    <img src={MainFooter} alt="Main footer image" />
+                  </picture>
+                </div>
+                <div id="galPic">
+                  <picture>
+                    <img src={Gal} alt="picture of girl" />
+                  </picture>
+                  {/*ENDS galPic div*/}
                 </div>
                 {/*ENDS icons div*/}
               </div>
+              {/*ENDS mainFooter div*/}
             </div>
             {/*ENDS col2 div*/}
           </div>
+
           <div id="col3">
             <div id="login">
               <p>login / register</p>
@@ -122,9 +135,39 @@ class Home extends Component {
             {/*ENDS nav div*/}
           </div>
           <div id="shadeSelection">
-            <picture>
+            <div id="shadeSlogan">
+              <h3>SELECT YOUR SHADES</h3>
+              {/*ENDS shadeSlogan*/}
+            </div>
+            <div id="shadeColFlex">
+              <div className="shadeCol">
+                <ul>
+                  <li>
+                    <img src={OakleyGlasses} />
+                    <p>Oakley Prizm Sunglasses</p>
+                  </li>
+                  <li>
+                    <img src={OakleyGlasses} />
+                  </li>
+                </ul>
+                {/*ENDS shadeCol1*/}
+              </div>
+              <div className="shadeCol">
+                <ul>
+                  <li>
+                    <img src={OakleyGlasses} />
+                  </li>
+                  <li>
+                    <img src={OakleyGlasses} />
+                  </li>
+                </ul>
+                {/*ENDS shadeCol1*/}
+              </div>
+              {/*ENDS shadeColFlex div*/}
+            </div>
+            {/* <picture>
               <img src={Shades} alt="shaes" />
-            </picture>
+            </picture> */}
           </div>
           {/*ENDS wrapper4 div*/}
         </div>
@@ -148,20 +191,11 @@ class Home extends Component {
                 </ul>
                 {/*ENDS nav div*/}
               </div>
-              <div id="menuListDetails">
-                <ul>
-                  <li>Oakley</li>
-                  <ul>
-                    <li>Glasses One</li>
-                    <li>Glasses Two</li>
-                  </ul>
-                  <li>Gucci</li>
-                  <ul>
-                    <li>Glasses One</li>
-                    <li>Glasses Two</li>
-                  </ul>
-                </ul>
-                {/*ENDS menuListDetails div*/}
+              <div id="productDisplay">
+                <Card>
+                  <ProductList />
+                </Card>
+                {/*ENDS productDisplay*/}
               </div>
               {/*ENDS innerMenu div*/}
             </div>

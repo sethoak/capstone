@@ -4,6 +4,8 @@ import Home from "../../home/home";
 import Login from "../auth/login";
 import UserForm from "../auth/registerForm";
 import LoginForm from "../auth/loginForm";
+import ProductList from "../products/productList";
+import ProductDetail from "../products/productDetails";
 
 export default class ApplicationViews extends Component {
   isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
@@ -23,7 +25,6 @@ export default class ApplicationViews extends Component {
             }
           }}
         />
-
         <Route
           exact
           path="/login"
@@ -67,6 +68,21 @@ export default class ApplicationViews extends Component {
             } else {
               return <Redirect to="/login" />;
             }
+          }}
+        />
+        <Route
+          exact
+          path="/products"
+          render={props => {
+            return <ProductList />;
+          }}
+        />
+        <Route
+          path="/products/:productId(\d+)"
+          render={props => {
+            return (
+              <ProductDetail productId={parseInt(props.match.params.product)} />
+            );
           }}
         />
       </React.Fragment>

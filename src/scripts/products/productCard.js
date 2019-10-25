@@ -14,7 +14,7 @@ export default class ProductCard extends Component {
       <div id="wrapper">
         <div id="column1">
           <div className="innerNav">
-            <ul>
+            <ul className="innerNavList">
               <li>Oakley</li>
               <ul>
                 <li>model X</li>

@@ -88,9 +88,22 @@ h3 {
 }
 
 #shadeSelection {
+  display: flex;
+  flex-direction: column;
+}
+
+#shadeSlogan {
+  align-items: center;
+  justify-content: center;
+}
+#shadeSelection {
   margin: 5%;
 }
 
+#shadeColFlex {
+  display: flex;
+  flex-direction: row;
+}
 #selectBrand {
   background-color: #ff965a;
   display: flex;

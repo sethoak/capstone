@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: center;
   align-content: center;
+  width: 80%;
 }
 #column1 {
   display: flex;
@@ -28,7 +29,6 @@
 }
 
 #description {
-  width: 50%;
   margin: 5% 0;
 }
 
@@ -48,5 +48,5 @@
 }
 
 #storeLocator {
-  margin-left: 20%;
+  margin-left: 40%;
 }

@@ -18,6 +18,7 @@ import FaceShape from "../images/faceshape.png";
 import Upload from "../images/upload.PNG";
 import Shades from "../images/selectShades.PNG";
 import Brands from "../images/selectBrand.PNG";
+import OakleyGlasses from "../../src/images/oakleyglasses_small.png";
 
 class Home extends Component {
   render() {
@@ -134,9 +135,39 @@ class Home extends Component {
             {/*ENDS nav div*/}
           </div>
           <div id="shadeSelection">
-            <picture>
+            <div id="shadeSlogan">
+              <h3>SELECT YOUR SHADES</h3>
+              {/*ENDS shadeSlogan*/}
+            </div>
+            <div id="shadeColFlex">
+              <div className="shadeCol">
+                <ul>
+                  <li>
+                    <img src={OakleyGlasses} />
+                    <p>Oakley Prizm Sunglasses</p>
+                  </li>
+                  <li>
+                    <img src={OakleyGlasses} />
+                  </li>
+                </ul>
+                {/*ENDS shadeCol1*/}
+              </div>
+              <div className="shadeCol">
+                <ul>
+                  <li>
+                    <img src={OakleyGlasses} />
+                  </li>
+                  <li>
+                    <img src={OakleyGlasses} />
+                  </li>
+                </ul>
+                {/*ENDS shadeCol1*/}
+              </div>
+              {/*ENDS shadeColFlex div*/}
+            </div>
+            {/* <picture>
               <img src={Shades} alt="shaes" />
-            </picture>
+            </picture> */}
           </div>
           {/*ENDS wrapper4 div*/}
         </div>

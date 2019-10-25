@@ -45,7 +45,7 @@ class Home extends Component {
               </picture>
               {/*ENDS slogan div*/}
             </div>
-            <div id="mainFooter">
+            <div id="mainFooterHome">
               <div id="icons">
                 <div id="mainPic">
                   <picture>

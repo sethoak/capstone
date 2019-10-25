@@ -8,15 +8,14 @@ h3 {
   background-color: #ff965a;
   flex-direction: row;
   justify-content: center;
+  padding-top: 0.5%;
 }
 #col1 {
   width: 25%;
-  margin: 10px 1%;
 }
 
 #col2 {
   width: 50%;
-  margin: 75px 1%;
 }
 
 #icons {
@@ -25,12 +24,15 @@ h3 {
 }
 
 #mainPic {
-  padding-top: 26%;
+  padding-top: 25%;
+}
+
+#galPic {
+  padding-top: 5%;
 }
 
 #col3 {
   width: 25%;
-  margin: 10px 1%;
 }
 
 .active {
@@ -104,6 +106,7 @@ h3 {
   display: flex;
   flex-direction: row;
 }
+
 #selectBrand {
   background-color: #ff965a;
   display: flex;
@@ -123,5 +126,5 @@ h3 {
   justify-content: center;
 }
 
-#productDisplay {
+#mainFooterHome {
 }

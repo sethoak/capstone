@@ -67,7 +67,7 @@ class Home extends Component {
 
           <div id="col3">
             <div id="login">
-              <p>login / register</p>
+              <h5>login / register</h5>
               {/*ENDS login div*/}
             </div>
             {/*ENDS col3 div*/}
@@ -148,6 +148,7 @@ class Home extends Component {
                   </li>
                   <li>
                     <img src={OakleyGlasses} />
+                    <p>Oakley Prizm Sunglasses</p>
                   </li>
                 </ul>
                 {/*ENDS shadeCol1*/}
@@ -156,9 +157,11 @@ class Home extends Component {
                 <ul>
                   <li>
                     <img src={OakleyGlasses} />
+                    <p>Oakley Prizm Sunglasses</p>
                   </li>
                   <li>
                     <img src={OakleyGlasses} />
+                    <p>Oakley Prizm Sunglasses</p>
                   </li>
                 </ul>
                 {/*ENDS shadeCol1*/}

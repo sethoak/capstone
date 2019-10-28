@@ -19,8 +19,21 @@ import Upload from "../images/upload.PNG";
 import Shades from "../images/selectShades.PNG";
 import Brands from "../images/selectBrand.PNG";
 import OakleyGlasses from "../../src/images/oakleyglasses_small.png";
+import Child from "./child";
 
 class Home extends Component {
+  constructor() {
+    super();
+    this.state = {
+      defaultBackground: true
+    };
+  }
+
+  toggleChildBackground() {
+    const newBackground = !this.state.defaultBackground;
+    this.setState({ defaultBackground: newBackground });
+  }
+
   render() {
     return (
       <>
@@ -204,7 +217,15 @@ class Home extends Component {
             </div>
             {/*ENDS selection div*/}
           </div>
-          {/*ENDS wrapper div*/}
+          {/*ENDS wrapper6 div*/}
+        </div>
+        <div id="wrapper7">
+          <div>
+            <Child
+              defaultBackground={this.state.defaultBackground}
+              toggleChildBackground={this.toggleChildBackground.bind(this)}
+            />
+          </div>
         </div>
       </>
     );

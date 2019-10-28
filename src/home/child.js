@@ -1,4 +1,5 @@
 import React from "react";
+import Head1 from "../images/faceshape.png";
 
 class MyComponent extends React.Component {
   constructor(props) {
@@ -8,23 +9,26 @@ class MyComponent extends React.Component {
     };
     this.toggleVisibility = this.toggleVisibility.bind(this);
   }
+
   toggleVisibility() {
     this.setState(state => ({
       visibility: !state.visibility
     }));
   }
+
   render() {
     if (this.state.visibility) {
       return (
         <div>
-          <button onClick={this.toggleVisibility}>Don't Click Me</button>
-          <h1>Now you see me!</h1>
+          <img src={Head1} />
+          <button onClick={this.toggleVisibility}>Clear Head</button>
         </div>
       );
     } else {
       return (
         <div>
-          <button onClick={this.toggleVisibility}>Click Me</button>
+          <img src={Head1} />
+          <button onClick={this.toggleVisibility}>Select Head One</button>
         </div>
       );
     }

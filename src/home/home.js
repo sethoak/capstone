@@ -22,16 +22,17 @@ import OakleyGlasses from "../../src/images/oakleyglasses_small.png";
 import Child from "./child";
 
 class Home extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      defaultBackground: true
+      visibility: false
     };
+    this.toggleVisibility = this.toggleVisibility.bind(this);
   }
-
-  toggleChildBackground() {
-    const newBackground = !this.state.defaultBackground;
-    this.setState({ defaultBackground: newBackground });
+  toggleVisibility() {
+    this.setState(state => ({
+      visibility: !state.visibility
+    }));
   }
 
   render() {
@@ -219,14 +220,7 @@ class Home extends Component {
           </div>
           {/*ENDS wrapper6 div*/}
         </div>
-        <div id="wrapper7">
-          <div>
-            <Child
-              defaultBackground={this.state.defaultBackground}
-              toggleChildBackground={this.toggleChildBackground.bind(this)}
-            />
-          </div>
-        </div>
+        <div id="wrapper7"></div>
       </>
     );
   }

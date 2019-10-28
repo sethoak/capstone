@@ -22,19 +22,6 @@ import OakleyGlasses from "../../src/images/oakleyglasses_small.png";
 import Child from "./child";
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      visibility: false
-    };
-    this.toggleVisibility = this.toggleVisibility.bind(this);
-  }
-  toggleVisibility() {
-    this.setState(state => ({
-      visibility: !state.visibility
-    }));
-  }
-
   render() {
     return (
       <>
@@ -220,7 +207,9 @@ class Home extends Component {
           </div>
           {/*ENDS wrapper6 div*/}
         </div>
-        <div id="wrapper7"></div>
+        <div id="wrapper7">
+          <Child />
+        </div>
       </>
     );
   }

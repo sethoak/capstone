@@ -19,6 +19,7 @@ import Upload from "../images/upload.PNG";
 import Shades from "../images/selectShades.PNG";
 import Brands from "../images/selectBrand.PNG";
 import OakleyGlasses from "../../src/images/oakleyglasses_small.png";
+import Child from "./child";
 
 class Home extends Component {
   render() {
@@ -67,7 +68,7 @@ class Home extends Component {
 
           <div id="col3">
             <div id="login">
-              <p>login / register</p>
+              <h5>login / register</h5>
               {/*ENDS login div*/}
             </div>
             {/*ENDS col3 div*/}
@@ -148,6 +149,7 @@ class Home extends Component {
                   </li>
                   <li>
                     <img src={OakleyGlasses} />
+                    <p>Oakley Prizm Sunglasses</p>
                   </li>
                 </ul>
                 {/*ENDS shadeCol1*/}
@@ -156,9 +158,11 @@ class Home extends Component {
                 <ul>
                   <li>
                     <img src={OakleyGlasses} />
+                    <p>Oakley Prizm Sunglasses</p>
                   </li>
                   <li>
                     <img src={OakleyGlasses} />
+                    <p>Oakley Prizm Sunglasses</p>
                   </li>
                 </ul>
                 {/*ENDS shadeCol1*/}
@@ -201,7 +205,10 @@ class Home extends Component {
             </div>
             {/*ENDS selection div*/}
           </div>
-          {/*ENDS wrapper div*/}
+          {/*ENDS wrapper6 div*/}
+        </div>
+        <div id="wrapper7">
+          <Child />
         </div>
       </>
     );

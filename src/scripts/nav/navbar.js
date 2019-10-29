@@ -22,18 +22,9 @@ class NavBar extends Component {
             ) : (
               <Redirect to="/login" />
             )}
-            {/* {this.props.user ? (
-              <li>
-                <Link className="nav-link" to="/cauldron">
-                  My Cauldron
-                </Link>
-              </li>
-            ) : (
-              <Redirect to="/login" />
-            )} */}
             {this.props.user ? (
               <li>
-                <Link className="nav-link" to="/coven">
+                <Link className="nav-link" to="/info">
                   info
                 </Link>
               </li>
@@ -43,17 +34,17 @@ class NavBar extends Component {
             {this.props.user ? (
               <>
                 <li>
-                  <Link className="nav-link" to="/chat">
+                  <Link className="nav-link" to="/about">
                     about
                   </Link>
                 </li>
                 <li>
-                  <Link className="nav-link" to="/news">
+                  <Link className="nav-link" to="/try">
                     try
                   </Link>
                 </li>
                 <li>
-                  <Link className="nav-link" to="/tasks">
+                  <Link className="nav-link" to="/buy">
                     buy
                   </Link>
                 </li>

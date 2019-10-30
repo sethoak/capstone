@@ -20,8 +20,17 @@ import Shades from "../images/selectShades.PNG";
 import Brands from "../images/selectBrand.PNG";
 import OakleyGlasses from "../../src/images/oakleyglasses_small.png";
 import Child from "./child";
+import apimanager from "../modules/apimanager";
 
 class Home extends Component {
+  saveFace = () => {
+    let saveFaces = {
+      id: this.props.faceShape.id,
+      name: this.props.faceShape.name
+    };
+    apimanager.post("faceShapes", saveFaces).then(response => response);
+  };
+
   render() {
     return (
       <>
@@ -106,6 +115,7 @@ class Home extends Component {
               <ul id="headshapes">
                 <li>
                   <img src={FaceShape} alt="face shape" />
+                  {/* <p>Head 1:{this.props.faceShape.name}</p> */}
                 </li>
                 <li>
                   <img src={FaceShape} alt="face shape" />

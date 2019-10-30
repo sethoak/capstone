@@ -9,6 +9,7 @@ import Store from "../../images/storeLocator.png";
 import Sunglasses from "../../images/trySunglasses.png";
 
 export default class ProductCard extends Component {
+  addFavorite = () => {};
   render() {
     // console.log(this.props.product.id);
     return (

@@ -21,6 +21,7 @@ import Brands from "../images/selectBrand.PNG";
 import OakleyGlasses from "../../src/images/oakleyglasses_small.png";
 import Child from "./child";
 import apimanager from "../modules/apimanager";
+import FaceList from "../scripts/faces/faceList";
 
 class Home extends Component {
   saveFace = () => {
@@ -111,6 +112,9 @@ class Home extends Component {
               <div id="selectHead">
                 <h3>SELECT YOUR HEAD SHAPE</h3>
                 {/*ENDS selectHead div*/}
+                <Card>
+                  <FaceList />
+                </Card>
               </div>
               <ul id="headshapes">
                 <li>

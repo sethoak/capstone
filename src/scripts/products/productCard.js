@@ -1,15 +1,33 @@
 import React, { Component } from "react";
 import "./productCard.css";
+import { Button } from "reactstrap";
 import Image from "../../images/oakleyglasses_small.png";
 import Small1 from "../../images/small1.png";
 import Small2 from "../../images/small2.png";
 import Small3 from "../../images/small3.png";
 import Store from "../../images/storeLocator.png";
 import Sunglasses from "../../images/trySunglasses.png";
+import apimanager from "../../modules/apimanager";
 
 export default class ProductCard extends Component {
+  addFavorite = () => {
+    let saveGlasses = {
+      userId: sessionStorage.getItem("credentials"),
+      title: this.props.product.name,
+      sunGlassesId: this.props.product.id
+    };
+    apimanager.post("userSunglasses", saveGlasses).then(response => response);
+  };
+  saveFace = () => {
+    let saveFaces = {
+      id: this.props.faceShape.id,
+      name: this.props.faceShape.name
+    };
+    apimanager.post("faceShapes", saveFaces).then(response => response);
+  };
+
   render() {
-    // console.log(this.props.product.id);
+    console.log(this.props.product, "here's the log");
     return (
       <div id="wrapper">
         <div id="column1">
@@ -79,6 +97,12 @@ export default class ProductCard extends Component {
                 STORE LOCATOR <img src={Store} />
               </p>
               {/*ENDS storeLocator div*/}
+            </div>
+            <div id="save">
+              <Button type="button" onClick={this.addFavorite}>
+                {" "}
+                SAVE{" "}
+              </Button>
             </div>
             {/*ENDS mainFooter div*/}
           </div>

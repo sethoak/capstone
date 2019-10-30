@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import FaceCard from "./faceCard";
 import API from "../../modules/apimanager";
 
-export default class ProductList extends Component {
+export default class FaceList extends Component {
   state = {
     headShapes: []
   };

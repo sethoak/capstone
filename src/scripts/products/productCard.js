@@ -18,6 +18,13 @@ export default class ProductCard extends Component {
     };
     apimanager.post("userSunglasses", saveGlasses).then(response => response);
   };
+  saveFace = () => {
+    let saveFaces = {
+      id: this.props.faceShape.id,
+      name: this.props.faceShape.name
+    };
+    apimanager.post("faceShapes", saveFaces).then(response => response);
+  };
 
   render() {
     console.log(this.props.product, "here's the log");

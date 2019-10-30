@@ -115,7 +115,6 @@ class Home extends Component {
               <ul id="headshapes">
                 <li>
                   <img src={FaceShape} alt="face shape" />
-                  {/* <p>Head 1:{this.props.faceShape.name}</p> */}
                 </li>
                 <li>
                   <img src={FaceShape} alt="face shape" />

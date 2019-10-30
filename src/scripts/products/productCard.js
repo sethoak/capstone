@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./productCard.css";
+import { Button } from "reactstrap";
 import Image from "../../images/oakleyglasses_small.png";
 import Small1 from "../../images/small1.png";
 import Small2 from "../../images/small2.png";
@@ -79,6 +80,15 @@ export default class ProductCard extends Component {
                 STORE LOCATOR <img src={Store} />
               </p>
               {/*ENDS storeLocator div*/}
+            </div>
+            <div id="save">
+              <Button
+                type="button"
+                onClick={() => this.addFavorite(this.state.product)}
+              >
+                {" "}
+                SAVE{" "}
+              </Button>
             </div>
             {/*ENDS mainFooter div*/}
           </div>

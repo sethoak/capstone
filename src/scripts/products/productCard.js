@@ -7,11 +7,20 @@ import Small2 from "../../images/small2.png";
 import Small3 from "../../images/small3.png";
 import Store from "../../images/storeLocator.png";
 import Sunglasses from "../../images/trySunglasses.png";
+import apimanager from "../../modules/apimanager";
 
 export default class ProductCard extends Component {
-  addFavorite = () => {};
+  addFavorite = () => {
+    let saveGlasses = {
+      userId: sessionStorage.getItem("credentials"),
+      title: this.props.product.name,
+      sunGlassesId: this.props.product.id
+    };
+    apimanager.post("userSunglasses", saveGlasses).then(response => response);
+  };
+
   render() {
-    // console.log(this.props.product.id);
+    console.log(this.props.product, "here's the log");
     return (
       <div id="wrapper">
         <div id="column1">
@@ -83,10 +92,7 @@ export default class ProductCard extends Component {
               {/*ENDS storeLocator div*/}
             </div>
             <div id="save">
-              <Button
-                type="button"
-                onClick={() => this.addFavorite(this.state.product)}
-              >
+              <Button type="button" onClick={this.addFavorite}>
                 {" "}
                 SAVE{" "}
               </Button>

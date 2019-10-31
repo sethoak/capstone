@@ -7,6 +7,7 @@ export default class DisplayCard extends Component {
   state = {
     name: ""
   };
+
   showFace = () => {
     apimanager
       .getHeadShotID("users", this.props.headShape.id)

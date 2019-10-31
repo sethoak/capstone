@@ -23,11 +23,11 @@ export default class LoginForm extends Component {
         user.password === this.state.password
       ) {
         console.log("here");
-        let credentials = user.id
+        let credentials = user.id;
         let box = document.querySelector(".remember");
-        if(box.checked === true){
+        if (box.checked === true) {
           this.props.rememberMe(credentials);
-          this.props.history.push("/")
+          this.props.history.push("/");
         } else {
           this.props.setUser(credentials);
           this.props.history.push("/");
@@ -54,7 +54,7 @@ export default class LoginForm extends Component {
       <form>
         <div className="box">
           <fieldset className="bod">
-            <h3 className="loginHeader">Join your coven:</h3>
+            <h3 className="loginHeader">Login:</h3>
             <div className="formgrid">
               <input
                 className="username"
@@ -81,7 +81,11 @@ export default class LoginForm extends Component {
               </div>
               <div>
                 <label htmlFor="inputPassword"></label>
-                <button type="button" className="signIn" onClick={this.handleLogin}>
+                <button
+                  type="button"
+                  className="signIn"
+                  onClick={this.handleLogin}
+                >
                   Sign In
                 </button>
               </div>

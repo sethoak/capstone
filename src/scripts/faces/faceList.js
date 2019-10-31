@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import FaceCard from "./faceCard";
+import "./faceCard.css";
 import API from "../../modules/apimanager";
 
 export default class FaceList extends Component {
@@ -7,14 +8,13 @@ export default class FaceList extends Component {
     headShapes: []
   };
 
-  componentDidMount() {
-    console.log("faces list");
+  componentDidMount = () => {
     API.getAll("headShapes").then(headShapes => {
       this.setState({
         headShapes: headShapes
       });
     });
-  }
+  };
 
   render() {
     console.log("is it working?");

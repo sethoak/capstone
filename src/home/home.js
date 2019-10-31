@@ -115,18 +115,8 @@ class Home extends Component {
                 <Card>
                   <FaceList />
                 </Card>
+                {/*ENDS selectHead div*/}
               </div>
-              <ul id="headshapes">
-                <li>
-                  <img src={FaceShape} alt="face shape" />
-                </li>
-                <li>
-                  <img src={FaceShape} alt="face shape" />
-                </li>
-                <li>
-                  <img src={FaceShape} alt="face shape" />
-                </li>
-              </ul>
               {/*ENDS wrapper3content*/}
             </div>
             <div id="upload">

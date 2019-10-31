@@ -8,7 +8,6 @@ export default class ProductList extends Component {
   };
 
   componentDidMount() {
-    console.log("sunglasses list");
     API.getAll("products").then(products => {
       this.setState({
         products: products
@@ -17,7 +16,6 @@ export default class ProductList extends Component {
   }
 
   render() {
-    console.log("is it working?");
     return (
       <div className="sunglassContainer">
         {this.state.products.map(product => (

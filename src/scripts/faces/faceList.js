@@ -17,7 +17,6 @@ export default class FaceList extends Component {
   };
 
   render() {
-    console.log("is it working?");
     return (
       <>
         <div id="selectHead">

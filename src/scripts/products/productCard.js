@@ -20,7 +20,6 @@ export default class ProductCard extends Component {
   };
 
   render() {
-    console.log(this.props.product, "here's the log");
     return (
       <div id="wrapper">
         <div id="column1">

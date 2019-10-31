@@ -4,17 +4,20 @@ import apimanager from "../../modules/apimanager";
 import FaceShape from "../../images/faceshape.png";
 
 export default class DisplayCard extends Component {
+  state = {
+    name: ""
+  };
   showFace = () => {
-    let showFace = {
-      headShapeId: this.props.headShape.id
-    };
     apimanager
-      .getHeadShot("users", showFace, sessionStorage.getItem("credentials"))
-      .then(response => response);
+      .getHeadShotID("users", this.props.headShape.id)
+      .then(response => {
+        this.setState({
+          name: response
+        });
+      });
   };
 
   render() {
-    console.log(this.headShapes, "here's the faceDisplay");
     return (
       <div id="faceShapeContainer">
         <div id="faceshapeImage">
@@ -22,7 +25,7 @@ export default class DisplayCard extends Component {
         </div>
         <div id="faceDetails">
           <p>{this.props.headShape.id}</p>
-          <p>{this.props.headShape.name}</p>
+          <p>{this.name}</p>
         </div>
       </div>
     );

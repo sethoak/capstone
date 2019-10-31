@@ -47,5 +47,10 @@ export default {
   },
   getHeadShot(id) {
     return fetch(`${url}/users/${id}`).then(result => result.json());
+  },
+  getHeadShotID(resource, id) {
+    return fetch(`${url}/${resource}/${id}&_expand=headShape`).then(result =>
+      result.json()
+    );
   }
 };

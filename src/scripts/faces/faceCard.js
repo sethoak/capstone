@@ -16,7 +16,6 @@ export default class FaceCard extends Component {
   };
 
   render() {
-    console.log(this.headShapes, "here's the headShapes");
     return (
       <div id="faceShapeContainer">
         <div id="faceshapeImage">

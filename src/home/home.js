@@ -14,14 +14,13 @@ import Logo from "../images/mainSlogan.PNG";
 import MainFooter from "../images/mainFooter.PNG";
 import Gal from "../images/gal.PNG";
 import Try from "../images/tryBefore.PNG";
-import FaceShape from "../images/faceshape.png";
-import Upload from "../images/upload.PNG";
-import Shades from "../images/selectShades.PNG";
 import Brands from "../images/selectBrand.PNG";
 import OakleyGlasses from "../../src/images/oakleyglasses_small.png";
 import Child from "./child";
 import apimanager from "../modules/apimanager";
 import FaceList from "../scripts/faces/faceList";
+import Upload from "../images/upload.PNG";
+import DisplayList from "../scripts/display/displayList";
 
 class Home extends Component {
   saveFace = () => {
@@ -112,12 +111,12 @@ class Home extends Component {
               <Card>
                 <FaceList />
               </Card>
+              <div id="upload">
+                <picture>
+                  <img src={Upload} alt="upload" />
+                </picture>
+              </div>
               {/*ENDS wrapper3content*/}
-            </div>
-            <div id="upload">
-              <picture>
-                <img src={Upload} alt="upload" />
-              </picture>
             </div>
             {/*ENDS wrapper3col2 div*/}
           </div>
@@ -206,7 +205,7 @@ class Home extends Component {
           {/*ENDS wrapper6 div*/}
         </div>
         <div id="wrapper7">
-          <Child />
+          <DisplayList />
         </div>
       </>
     );

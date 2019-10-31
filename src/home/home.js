@@ -109,14 +109,9 @@ class Home extends Component {
           </div>
           <div id="wrapper3col2">
             <div id="wrapper3content">
-              <div id="selectHead">
-                <h3>SELECT YOUR HEAD SHAPE</h3>
-                {/*ENDS selectHead div*/}
-                <Card>
-                  <FaceList />
-                </Card>
-                {/*ENDS selectHead div*/}
-              </div>
+              <Card>
+                <FaceList />
+              </Card>
               {/*ENDS wrapper3content*/}
             </div>
             <div id="upload">

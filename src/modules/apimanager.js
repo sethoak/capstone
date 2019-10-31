@@ -2,9 +2,17 @@ let url = "http://localhost:8088";
 
 export default {
   post(resource, newObj) {
-    console.log(resource, "tracking resource");
     return fetch(`${url}/${resource}`, {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newObj)
+    }).then(newObj => newObj.json());
+  },
+  patch(resource, newObj, id) {
+    return fetch(`${url}/${resource}/${id}`, {
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json"
       },

@@ -1,5 +1,9 @@
 #faceShapeContainer {
-  display: flex;
-  flex-direction: row;
-  background-color: #fff;
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+#headShapeContainer {
+  display: flex !important;
+  flex-direction: row !important;
 }

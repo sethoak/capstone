@@ -3,15 +3,16 @@ import "./faceCard.css";
 import { Button } from "reactstrap";
 import apimanager from "../../modules/apimanager";
 import FaceShape from "../../images/faceshape.png";
+import "./faceCard.css";
 
 export default class FaceCard extends Component {
   addFace = () => {
     let saveFace = {
-      userId: sessionStorage.getItem("credentials"),
-      name: this.props.headShapes.name,
-      id: this.props.headShapes.id
+      headShapeId: this.props.headShape.id
     };
-    apimanager.post("users", saveFace).then(response => response);
+    apimanager
+      .patch("users", saveFace, sessionStorage.getItem("credentials"))
+      .then(response => response);
   };
 
   render() {
@@ -24,6 +25,9 @@ export default class FaceCard extends Component {
         <div id="faceDetails">
           <p>{this.props.headShape.id}</p>
           <p>{this.props.headShape.name}</p>
+          <Button type="button" onClick={this.addFace}>
+            Select Face
+          </Button>
         </div>
       </div>
     );

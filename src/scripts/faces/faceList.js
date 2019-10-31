@@ -19,11 +19,16 @@ export default class FaceList extends Component {
   render() {
     console.log("is it working?");
     return (
-      <div className="headShapeContainer">
-        {this.state.headShapes.map(headShape => (
-          <FaceCard key={headShape.id} headShape={headShape} />
-        ))}
-      </div>
+      <>
+        <div id="selectHead">
+          <h3>SELECT YOUR HEAD SHAPE</h3>
+        </div>
+        <div className="headShapeContainer">
+          {this.state.headShapes.map(headShape => (
+            <FaceCard key={headShape.id} headShape={headShape} />
+          ))}
+        </div>
+      </>
     );
   }
 }

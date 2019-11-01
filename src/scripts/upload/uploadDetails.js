@@ -7,7 +7,6 @@ export default class uploadDetails extends Component {
   };
 
   componentDidMount() {
-    console.log("Upload Details: ComponentDidMount");
     APIManager.get(this.props.faceId).then(face => {
       this.setState({
         name: face.name

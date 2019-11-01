@@ -8,7 +8,6 @@ export default class ProductDetails extends Component {
   };
 
   componentDidMount() {
-    console.log("ProductDetails: ComponentDidMount");
     APIManager.get(this.props.productId).then(product => {
       this.setState({
         name: product.name

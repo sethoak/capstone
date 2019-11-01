@@ -44,8 +44,13 @@ export default {
   },
   get(id) {
     return fetch(`${url}/products/${id}`).then(result => result.json());
+  },
+  getHeadShot(id) {
+    return fetch(`${url}/users/${id}`).then(result => result.json());
+  },
+  getHeadShotID(resource, id) {
+    return fetch(`${url}/${resource}/${id}&_expand=headShape`).then(result =>
+      result.json()
+    );
   }
-  // get(resource, id) {
-  //   return fetch(`${url}/${resource}/${id}`).then(newObj => newObj.json());
-  // }
 };

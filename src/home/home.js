@@ -207,6 +207,9 @@ class Home extends Component {
         <div id="wrapper7">
           <DisplayList />
         </div>
+        {/* <div>
+          <Child />
+        </div> */}
       </>
     );
   }

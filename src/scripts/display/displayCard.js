@@ -28,6 +28,7 @@ export default class DisplayCard extends Component {
         </div>
         <div id="faceDetails">
           <p>{this.props.headShape.id}</p>
+          {this.props.headShape.name}
         </div>
       </div>
     );

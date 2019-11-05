@@ -27,8 +27,7 @@ export default class DisplayCard extends Component {
           <img src={FaceShape} alt="face shape" />
         </div>
         <div id="faceDetails">
-          <p>{this.props.headShape.id}</p>
-          {this.props.headShape.name}
+          <p>{this.props.headShape.headShapeId}</p>
         </div>
       </div>
     );

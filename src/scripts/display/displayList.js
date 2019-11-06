@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DisplayCard from "./displayCard";
 import API from "../../modules/apimanager";
+import "./displayList.css";
 
 export default class DisplayList extends Component {
   state = {

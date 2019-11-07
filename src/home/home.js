@@ -23,6 +23,10 @@ import Upload from "../images/upload.PNG";
 import DisplayList from "../scripts/display/displayList";
 
 class Home extends Component {
+  // state = {
+  //   sunglassSelection = {}
+  // }
+
   saveFace = () => {
     let saveFaces = {
       id: this.props.faceShape.id,

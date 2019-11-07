@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import DisplayCard from "./displayCard";
+import ResultCard from "./resultCard";
 import API from "../../modules/apimanager";
 import "./displayList.css";
 
@@ -44,10 +45,10 @@ export default class DisplayList extends Component {
             />
           </div>
           <div id="sunglassResultContainer">
-            <ResultCard
+            {/* <ResultCard
               key={this.state.products.id}
               productSelected={this.state.products}
-            />
+            /> */}
           </div>
         </div>
       </>

@@ -1,9 +1,14 @@
 #faceShapeContainer {
-  display: flex !important;
-  flex-direction: row !important;
+  display: flex;
+  flex-direction: row;
 }
 
 #headShapeContainer {
-  display: flex !important;
-  flex-direction: row !important;
+  display: flex;
+  flex-direction: row;
+}
+
+#headShapeResults {
+  display: flex;
+  flex-direction: row;
 }

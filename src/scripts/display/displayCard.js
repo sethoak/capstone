@@ -23,16 +23,14 @@ export default class DisplayCard extends Component {
 
   render() {
     return (
-      <div id="faceShapeWrapper">
-        <div id="faceShapeContainer">
-          <div id="faceshapeImage">
-            <img src={FaceShape} alt="face shape" />
-            <p>pupup</p>
-          </div>
-          <div id="faceDetails">
-            <p>{this.props.headShape.headShapeId}</p>
-            <p>pupup</p>
-          </div>
+      <div id="faceShapeContainer">
+        <div id="faceshapeImage">
+          <img src={FaceShape} alt="face shape" />
+        </div>
+        <div id="faceDetails">
+          <p>{this.props.headShape.headShapeId}</p>
+          <p>{this.props.headShape.username}</p>
+          <p>{this.props.headShape.userPic}</p>
         </div>
       </div>
     );

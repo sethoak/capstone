@@ -36,11 +36,13 @@ export default class DisplayList extends Component {
         <div id="selectHead">
           <h3>DISPLAY AREA</h3>
         </div>
-        <div className="headShapeContainer">
-          <DisplayCard
-            key={this.state.headShapes.id}
-            headShape={this.state.headShapes}
-          />
+        <div id="wrapper">
+          <div className="headShapeContainer">
+            <DisplayCard
+              key={this.state.headShapes.id}
+              headShape={this.state.headShapes}
+            />
+          </div>
         </div>
       </>
     );

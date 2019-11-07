@@ -22,7 +22,7 @@ export default class FaceList extends Component {
         <div id="selectHead">
           <h3>SELECT YOUR HEAD SHAPE</h3>
         </div>
-        <div className="headShapeContainer">
+        <div className="headShapeResults">
           {this.state.headShapes.map(headShape => (
             <FaceCard key={headShape.id} headShape={headShape} />
           ))}

@@ -75,6 +75,11 @@ h5 {
   margin: 1%;
 }
 
+#wrapper3content {
+  display: flex;
+  flex-direction: column;
+}
+
 #wrapper3content p {
   font-weight: 900;
 }

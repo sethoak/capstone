@@ -30,7 +30,7 @@ export default class DisplayCard extends Component {
         <div id="faceDetails">
           <p>{this.props.headShape.headShapeId}</p>
           <p>{this.props.headShape.username}</p>
-          <p>{this.props.headShape.userPic}</p>
+          <img src={this.props.headShape.userPic} />
         </div>
       </div>
     );

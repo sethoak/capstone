@@ -23,6 +23,10 @@ import Upload from "../images/upload.PNG";
 import DisplayList from "../scripts/display/displayList";
 
 class Home extends Component {
+  // state = {
+  //   sunglassSelection = {}
+  // }
+
   saveFace = () => {
     let saveFaces = {
       id: this.props.faceShape.id,
@@ -78,6 +82,7 @@ class Home extends Component {
           <div id="col3">
             <div id="login">
               <h5>login / register</h5>
+              <h5>favorites</h5>
               {/*ENDS login div*/}
             </div>
             {/*ENDS col3 div*/}
@@ -207,9 +212,9 @@ class Home extends Component {
         <div id="wrapper7">
           <DisplayList />
         </div>
-        {/* <div>
+        <div>
           <Child />
-        </div> */}
+        </div>
       </>
     );
   }

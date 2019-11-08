@@ -1,16 +1,14 @@
 import React, { Component } from "react";
-import DisplayCard from "./displayCard";
 import ResultCard from "./resultCard";
 import API from "../../modules/apimanager";
-import "./displayList.css";
 
-export default class DisplayList extends Component {
+export default class ResultList extends Component {
   state = {
-    headShapes: {}
+    products: {}
   };
 
-  showFace = () => {
-    API.getHeadShotID("users", this.state.headShapes.id).then(response => {
+  showSelection = () => {
+    API.getHeadShotID("products", this.state.products.id).then(response => {
       this.setState({
         name: response
       });
@@ -18,15 +16,14 @@ export default class DisplayList extends Component {
   };
 
   componentDidMount = () => {
-    console.log("head state?");
+    console.log("head state products?");
 
     API.getHeadShot(sessionStorage.getItem("credentials")).then(user => {
-      console.log("what's the user coming back as?", user);
       this.setState(
         {
-          headShapes: user
+          products: user
         },
-        this.showFace()
+        this.showSelection()
       );
     });
   };
@@ -45,10 +42,10 @@ export default class DisplayList extends Component {
             />
           </div>
           <div id="sunglassResultContainer">
-            {/* <ResultCard
+            <ResultCard
               key={this.state.products.id}
               productSelected={this.state.products}
-            /> */}
+            />
           </div>
         </div>
       </>

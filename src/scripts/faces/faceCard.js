@@ -18,11 +18,8 @@ export default class FaceCard extends Component {
   render() {
     return (
       <div id="faceShapeContainer">
-        <div id="faceshapeImage">
-          <img src={FaceShape} alt="face shape" />
-        </div>
         <div id="faceDetails">
-          <p>{this.props.headShape.id}</p>
+          <img src={this.props.headShape.headImage} />
           <p>{this.props.headShape.name}</p>
           <Button type="button" onClick={this.addFace}>
             Select Face

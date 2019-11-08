@@ -19,7 +19,7 @@ export default class DisplayCard extends Component {
   // };
 
   render() {
-    console.log("is it grapping the ID?", this.props.headShape);
+    console.log("is it grabbing the ID?", this.props.headShape.id);
     return (
       <div id="faceShapeContainer">
         <div id="faceDetails">

@@ -82,6 +82,7 @@ class Home extends Component {
           <div id="col3">
             <div id="login">
               <h5>login / register</h5>
+              <h5>favorites</h5>
               {/*ENDS login div*/}
             </div>
             {/*ENDS col3 div*/}
@@ -211,9 +212,9 @@ class Home extends Component {
         <div id="wrapper7">
           <DisplayList />
         </div>
-        {/* <div>
+        <div>
           <Child />
-        </div> */}
+        </div>
       </>
     );
   }

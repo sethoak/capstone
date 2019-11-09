@@ -15,12 +15,15 @@ import MainFooter from "../images/mainFooter.PNG";
 import Gal from "../images/gal.PNG";
 import Try from "../images/tryBefore.PNG";
 import Brands from "../images/selectBrand.PNG";
-import OakleyGlasses from "../../src/images/oakleyglasses_small.png";
 import Child from "./child";
 import apimanager from "../modules/apimanager";
 import FaceList from "../scripts/faces/faceList";
 import Upload from "../images/upload.PNG";
 import DisplayList from "../scripts/display/displayList";
+import Oakley from "../images/oakley_mainImage_small.png";
+import Gucci from "../images/gucci_mainImage_small.png";
+import Prada from "../images/prada_mainImage_small.png";
+import RayBan from "../images/rayban_mainImage_small.png";
 
 class Home extends Component {
   // state = {
@@ -146,12 +149,12 @@ class Home extends Component {
               <div className="shadeCol">
                 <ul>
                   <li>
-                    <img src={OakleyGlasses} />
-                    <p>Oakley Prizm Sunglasses</p>
+                    <img src={Gucci} />
+                    <p>Gucci</p>
                   </li>
                   <li>
-                    <img src={OakleyGlasses} />
-                    <p>Oakley Prizm Sunglasses</p>
+                    <img src={Oakley} />
+                    <p>Oakley</p>
                   </li>
                 </ul>
                 {/*ENDS shadeCol1*/}
@@ -159,12 +162,12 @@ class Home extends Component {
               <div className="shadeCol">
                 <ul>
                   <li>
-                    <img src={OakleyGlasses} />
-                    <p>Oakley Prizm Sunglasses</p>
+                    <img src={Prada} />
+                    <p>Prada</p>
                   </li>
                   <li>
-                    <img src={OakleyGlasses} />
-                    <p>Oakley Prizm Sunglasses</p>
+                    <img src={RayBan} />
+                    <p>Ray-Ban</p>
                   </li>
                 </ul>
                 {/*ENDS shadeCol1*/}

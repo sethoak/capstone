@@ -12,7 +12,7 @@ class MyComponent extends React.Component {
     super(props);
     this.state = {
       visibility: false,
-      currentGlassesURL: "here it is"
+      currentGlassesURL: ""
     };
     this.toggleVisibility = this.toggleVisibility.bind(this);
     this.setGlassesURL = this.setGlassesURL.bind(this);

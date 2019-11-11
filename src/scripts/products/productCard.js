@@ -93,7 +93,7 @@ export default class ProductCard extends Component {
             {/*ENDS mainAreaContainer div*/}
           </div>
           <div id="mainFooter">
-            <div id="try">
+            <div id="tryThem">
               <p>
                 TRY THEM ON{" "}
                 <img

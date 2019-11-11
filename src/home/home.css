@@ -1,15 +1,24 @@
 h3 {
-  font-size: 3.4em;
+  font-size: 3.4rem;
 }
 
 h5 {
-  font-size: 1em;
+  font-size: 2.4rem;
+}
+
+#login {
+  margin-left: 40%;
 }
 
 #wrapper1 {
   display: flex;
   flex-direction: row;
   background-color: #ff965a;
+  background-image: url("../images/sunglassesArray.png");
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-position: center;
+
   flex-direction: row;
   justify-content: center;
   padding-top: 0.5%;
@@ -20,16 +29,53 @@ h5 {
 
 #col2 {
   width: 50%;
-  margin-left: 5%;
+}
+
+#wordsSlogan {
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(241, 236, 236, 0.5);
+  border-radius: 3%;
+}
+
+#welcome {
+  color: #000;
+  font-size: 13.4rem;
+  margin: 0;
+}
+
+#to {
+  color: #fff;
+  font-size: 5rem;
+  margin: -5%;
+}
+
+#try {
+  color: #000;
+  font-size: 13.4rem;
+  margin: -40px;
+}
+
+#buy {
+  font-size: 13.4rem;
+  color: #000;
+  margin: 0;
 }
 
 #icons {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-content: center;
 }
 
 #mainPic {
   padding-top: 25%;
+}
+
+#here {
+  background-color: rgba(241, 236, 236, 0.5);
+  margin-bottom: 5%;
 }
 
 #slogan {

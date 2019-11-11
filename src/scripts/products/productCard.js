@@ -98,7 +98,7 @@ export default class ProductCard extends Component {
                 TRY THEM ON{" "}
                 <img
                   src={Sunglasses}
-                  onClick={this.props.setGlassesURLCB.bind(this.props.product)}
+                  onClick={this.props.setGlassesURLCB.bind(this.props.product.sunglassesImageSelection)}
                 />
               </p>
               {/*ENDS try div*/}

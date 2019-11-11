@@ -126,11 +126,11 @@ class Home extends Component {
               <Card>
                 <Child />
               </Card>
-              <div id="upload">
+              {/* <div id="upload">
                 <picture>
                   <img src={Upload} alt="upload" />
                 </picture>
-              </div>
+              </div> */}
               {/*ENDS wrapper3content*/}
             </div>
             {/*ENDS wrapper3col2 div*/}

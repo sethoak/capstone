@@ -6,6 +6,8 @@ import TryGlasses from "../images/oakleyglasses_small.png";
 import "./child.css";
 import ProductList from "../scripts/products/productList";
 import UserPic from "../images/user1_small.png";
+import Upload from "../images/upload.PNG";
+
 class MyComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -43,8 +45,10 @@ class MyComponent extends React.Component {
         <div id="headContainer">
           <div id="alignment">
             <img src={UserPic} />
-            <img src={this.state.currentGlassesURL} id="thisIsIt"/>
-            <button onClick={this.toggleVisibility} id="clearButton">Clear Head</button>
+            <img src={this.state.currentGlassesURL} id="thisIsIt" />
+            <button onClick={this.toggleVisibility} id="clearButton">
+              Clear Head
+            </button>
             <ProductList setGlassesURLCB={this.setGlassesURL} />
           </div>
         </div>
@@ -75,7 +79,15 @@ class MyComponent extends React.Component {
                 Select User Picture
               </button>
             </div>
-            {/*ENDS faceWrapper div*/}
+          </div>
+          {/*ENDS faceWrapper div*/}
+          <div id="uploadPicContainer">
+            <div id="upload">
+              <picture>
+                <img src={Upload} alt="upload" />
+              </picture>
+            </div>
+            {/*ENDS uploadPicContainer*/}
           </div>
         </>
       );

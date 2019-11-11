@@ -5,13 +5,13 @@
 }
 
 #faceWrapper {
-  background-color: #ff965a;
+  /* background-color: #ff965a; */
   display: flex;
   flex-direction: row;
 }
 
 #headContainer {
-  background-color: #ff965a;
+  /* background-color: #ff965a; */
   display: flex;
   flex-direction: column;
 }

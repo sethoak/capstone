@@ -109,7 +109,24 @@ export default class ProductCard extends Component {
             </div>
             <div id="storeLocator">
               <p>
-                STORE LOCATOR <img src={Store} />
+                <a>
+                  STORE LOCATOR <img src={Store} />
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="http://google.com" target="_blank">
+                          Nashville
+                        </a>
+                      </li>
+                      <li>
+                        {" "}
+                        <a href="http://google.com" target="_blank">
+                          Green Hills
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
               </p>
               {/*ENDS storeLocator div*/}
             </div>

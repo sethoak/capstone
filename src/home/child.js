@@ -3,6 +3,7 @@ import Head1 from "../images/faceshape.png";
 import Head2 from "../images/head2.jpg";
 import Head3 from "../images/faceshape3.png";
 import "./child.css";
+import ProductList from "../scripts/products/productList";
 
 class MyComponent extends React.Component {
   constructor(props) {
@@ -26,6 +27,7 @@ class MyComponent extends React.Component {
           <div>
             <img src={Head1} />
             <button onClick={this.toggleVisibility}>Clear Head</button>
+            <ProductList />
           </div>
         </div>
       );

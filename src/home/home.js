@@ -11,7 +11,7 @@ import {
 import "./home.css";
 import ProductList from "../scripts/products/productList";
 import Logo from "../images/mainSlogan.PNG";
-import MainFooter from "../images/mainFooter.PNG";
+import MainFooter from "../images/mainFooterImages.png";
 import Gal from "../images/gal.PNG";
 import Try from "../images/tryBefore.PNG";
 import Brands from "../images/selectBrand.PNG";
@@ -73,7 +73,7 @@ class Home extends Component {
               <div id="icons">
                 <div id="mainPic">
                   <picture>
-                    {/* <img src={MainFooter} alt="Main footer image" /> */}
+                    <img src={MainFooter} alt="Main footer image" id="here" />
                   </picture>
                 </div>
                 <div id="galPic">

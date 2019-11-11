@@ -1,13 +1,13 @@
 h3 {
-  font-size: 3.4em;
+  font-size: 3.4rem;
 }
 
 h5 {
-  font-size: 1em;
+  font-size: 2.4rem;
 }
 
 #login {
-  margin-left: 45%;
+  margin-left: 40%;
 }
 
 #wrapper1 {
@@ -29,7 +29,6 @@ h5 {
 
 #col2 {
   width: 50%;
-  margin-left: 5%;
 }
 
 #wordsSlogan {
@@ -66,10 +65,17 @@ h5 {
 #icons {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-content: center;
 }
 
 #mainPic {
   padding-top: 25%;
+}
+
+#here {
+  background-color: rgba(241, 236, 236, 0.5);
+  margin-bottom: 5%;
 }
 
 #slogan {

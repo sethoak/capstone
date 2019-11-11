@@ -5,15 +5,17 @@ import Head3 from "../images/faceshape3.png";
 import TryGlasses from "../images/oakleyglasses_small.png";
 import "./child.css";
 import ProductList from "../scripts/products/productList";
+import ReactDOM from "react-dom";
 
 class MyComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       visibility: false,
-      currentGlassesURL: ""
+      currentGlassesURL: "here it is"
     };
     this.toggleVisibility = this.toggleVisibility.bind(this);
+    this.setGlassesURL = this.setGlassesURL.bind(this);
   }
 
   toggleVisibility() {
@@ -22,10 +24,16 @@ class MyComponent extends React.Component {
     }));
   }
 
-  setGlassesURL = glassesURL => {
+  setGlassesURL(glassesURL) {
     console.log(glassesURL, "glassesURL?");
-    this.setState({ currentGlassesURL: glassesURL });
-  };
+    this.setState(state => ({ currentGlassesURL: glassesURL }));
+    console.log(this.state.currentGlassesURL);
+  }
+
+  shouldComponentUpdate() {
+    const differentImage = this.props.currentGlassesURL !== "";
+    return differentImage;
+  }
 
   render() {
     if (this.state.visibility) {

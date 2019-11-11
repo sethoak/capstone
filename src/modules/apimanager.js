@@ -45,6 +45,9 @@ export default {
   get(id) {
     return fetch(`${url}/products/${id}`).then(result => result.json());
   },
+  getGlassesImages(id) {
+    return fetch(`${url}/images/${id}`).then(result => result.json());
+  },
   getHeadShot(id) {
     return fetch(`${url}/users/${id}`).then(result => result.json());
   },

@@ -11,6 +11,14 @@ import apimanager from "../../modules/apimanager";
 // import Holbrook from "../../images/holbrook_mainImage_small.png";
 
 export default class ProductCard extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      currentGlassesURL: ""
+    };
+  }
+
   addFavorite = () => {
     let saveGlasses = {
       userId: sessionStorage.getItem("credentials"),
@@ -19,6 +27,12 @@ export default class ProductCard extends Component {
     };
     apimanager.post("userSunglasses", saveGlasses).then(response => response);
   };
+
+  // putOnGlasses(glassesID) {
+  //   this.setState({
+  //     currentGlassesURL: getGlassesImages(glassesID)
+  //   });
+  // }
 
   render() {
     return (
@@ -81,7 +95,15 @@ export default class ProductCard extends Component {
           <div id="mainFooter">
             <div id="try">
               <p>
-                TRY THEM ON <img src={Sunglasses} />
+                TRY THEM ON{" "}
+                <img
+                  src={Sunglasses}
+                  onClick={() =>
+                    this.props.setGlassesURLCB(
+                      this.props.product.sunglassesImageSelection
+                    )
+                  }
+                />
               </p>
               {/*ENDS try div*/}
             </div>

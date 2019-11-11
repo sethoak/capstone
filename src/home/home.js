@@ -57,21 +57,28 @@ class Home extends Component {
 
           <div id="col2">
             <div id="slogan">
-              <picture>
+              <div id="wordsSlogan">
+                <p id="welcome">WELCOME</p>
+                <p id="to">TO</p>
+                <p id="try">TRY BEFORE</p>
+                <p id="buy">YOU BUY</p>
+                {/*ENDS wordsSlogan*/}
+              </div>
+              {/* <picture>
                 <img src={Logo} alt="Logo" />
-              </picture>
+              </picture> */}
               {/*ENDS slogan div*/}
             </div>
             <div id="mainFooterHome">
               <div id="icons">
                 <div id="mainPic">
                   <picture>
-                    <img src={MainFooter} alt="Main footer image" />
+                    {/* <img src={MainFooter} alt="Main footer image" /> */}
                   </picture>
                 </div>
                 <div id="galPic">
                   <picture>
-                    <img src={Gal} alt="picture of girl" />
+                    {/* <img src={Gal} alt="picture of girl" /> */}
                   </picture>
                   {/*ENDS galPic div*/}
                 </div>

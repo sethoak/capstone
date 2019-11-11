@@ -12,7 +12,7 @@ class NavBar extends Component {
     return (
       <header>
         <nav>
-          <ul className="container">
+          {/* <ul className="container">
             {this.props.user ? (
               <li>
                 <Link className="nav-link" to="/">
@@ -55,7 +55,7 @@ class NavBar extends Component {
                 </li>
               </>
             ) : null}
-          </ul>
+          </ul> */}
         </nav>
       </header>
     );

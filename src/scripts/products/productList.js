@@ -19,7 +19,11 @@ export default class ProductList extends Component {
     return (
       <div className="sunglassContainer">
         {this.state.products.map(product => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard
+            key={product.id}
+            product={product}
+            setGlassesURLCB={this.props.setGlassesURLCB}
+          />
         ))}
       </div>
     );

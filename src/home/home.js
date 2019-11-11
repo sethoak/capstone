@@ -201,9 +201,9 @@ class Home extends Component {
                 {/*ENDS nav div*/}
               </div>
               <div id="productDisplay">
-                <Card>
+                {/* <Card>
                   <ProductList />
-                </Card>
+                </Card> */}
                 {/*ENDS productDisplay*/}
               </div>
               {/*ENDS innerMenu div*/}

@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import "./productCard.css";
 import { Button } from "reactstrap";
-import Image from "../../images/oakleyglasses_small.png";
-import Small1 from "../../images/small1.png";
+// import Image from "../../images/oakleyglasses_small.png";
+// import Small1 from "../../images/small1.png";
 import Small2 from "../../images/small2.png";
 import Small3 from "../../images/small3.png";
 import Store from "../../images/storeLocator.png";
 import Sunglasses from "../../images/trySunglasses.png";
 import apimanager from "../../modules/apimanager";
-import Holbrook from "../../images/holbrook_mainImage_small.png";
+// import Holbrook from "../../images/holbrook_mainImage_small.png";
 
 export default class ProductCard extends Component {
   addFavorite = () => {
@@ -106,7 +106,7 @@ export default class ProductCard extends Component {
           <div id="sidePictures">
             <ul id="smallSidePictures">
               <li>
-                <img src={Small1} />
+                <img src={this.props.product.sunglassesImageSelection} />
               </li>
               <li>
                 <img src={Small2} />

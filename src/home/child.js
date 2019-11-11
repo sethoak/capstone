@@ -24,16 +24,19 @@ class MyComponent extends React.Component {
     }));
   }
 
-  setGlassesURL(glassesURL) {
-    console.log(glassesURL, "glassesURL?");
-    this.setState(state => ({ currentGlassesURL: glassesURL }));
-    console.log(this.state.currentGlassesURL);
+  setGlassesURL(currentGlassesURL) {
+    console.log(currentGlassesURL, "glassesURL?");
+    this.setState({ currentGlassesURL });
+    /* this.setState(function({currentGlassesURL}) {
+      console.log(glassesURL.currentGlassesURL, "glassesURL?");
+      return { currentGlassesURL: glassesURL };
+    }); */
   }
 
-  shouldComponentUpdate() {
-    const differentImage = this.props.currentGlassesURL !== "";
-    return differentImage;
-  }
+  // shouldComponentUpdate() {
+  //   const differentImage = this.props.currentGlassesURL !== "";
+  //   return differentImage;
+  // }
 
   render() {
     if (this.state.visibility) {
@@ -41,7 +44,7 @@ class MyComponent extends React.Component {
         <div id="headContainer">
           <div>
             <img src={Head1} />
-            <img src={this.props.currentGlassesURL} />
+            <img src={this.state.currentGlassesURL} />
             <button onClick={this.toggleVisibility}>Clear Head</button>
             <ProductList setGlassesURLCB={this.setGlassesURL} />
           </div>

@@ -124,7 +124,7 @@ class Home extends Component {
           <div id="wrapper3col2">
             <div id="wrapper3content">
               <Card>
-                <FaceList />
+                <Child />
               </Card>
               <div id="upload">
                 <picture>
@@ -199,12 +199,12 @@ class Home extends Component {
           <div id="selection">
             <div id="innerMenu">
               <div className="nav">
-                <ul>
+                {/* <ul>
                   <li>home</li>
                   <li>info</li>
                   <li>TRY</li>
                   <li>buy</li>
-                </ul>
+                </ul> */}
                 {/*ENDS nav div*/}
               </div>
               <div id="productDisplay">
@@ -219,12 +219,10 @@ class Home extends Component {
           </div>
           {/*ENDS wrapper6 div*/}
         </div>
-        <div id="wrapper7">
+        {/* <div id="wrapper7">
           <DisplayList />
-        </div>
-        <div>
-          <Child />
-        </div>
+        </div> */}
+        <div>{/* <Child /> */}</div>
       </>
     );
   }

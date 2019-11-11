@@ -3,3 +3,26 @@
   flex-direction: column;
   background-color: #fff;
 }
+
+#faceWrapper {
+  background-color: #ff965a;
+  display: flex;
+  flex-direction: row;
+}
+
+#headContainer {
+  background-color: #ff965a;
+  display: flex;
+  flex-direction: column;
+}
+
+#thisIsIt {
+  margin-left: -15%;
+}
+
+#clearButton {
+  margin-left: 15%;
+}
+
+#alignment {
+}

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ProductCard from "./productCard";
 import API from "../../modules/apimanager";
+import "./productCard.css";
 
 export default class ProductList extends Component {
   state = {

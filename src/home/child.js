@@ -7,6 +7,7 @@ import "./child.css";
 import ProductList from "../scripts/products/productList";
 import UserPic from "../images/user1_small.png";
 import Upload from "../images/upload.PNG";
+import Draggable from "react-draggable";
 
 class MyComponent extends React.Component {
   constructor(props) {
@@ -45,7 +46,9 @@ class MyComponent extends React.Component {
         <div id="headContainer">
           <div id="alignment">
             <img src={UserPic} />
-            <img src={this.state.currentGlassesURL} id="thisIsIt" />
+            <Draggable>
+              <img src={this.state.currentGlassesURL} id="thisIsIt" />
+            </Draggable>
             <div>
               <button onClick={this.toggleVisibility} id="clearButton">
                 Clear Head

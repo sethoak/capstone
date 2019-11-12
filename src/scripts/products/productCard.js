@@ -44,6 +44,7 @@ export default class ProductCard extends Component {
               <ul>
                 <li>prizm</li>
                 <li>holbrook</li>
+                <li>clifden</li>
               </ul>
             </ul>
             {/*ENDS innerNav div*/}

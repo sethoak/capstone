@@ -91,7 +91,7 @@ class Home extends Component {
 
           <div id="col3">
             <div id="login">
-              <h5>login / register</h5>
+              <h5>logout</h5>
               <h5>favorites</h5>
               {/*ENDS login div*/}
             </div>
@@ -101,9 +101,15 @@ class Home extends Component {
         </div>
         <div id="wrapper2">
           <div id="wrapper2pic">
-            <picture>
+            <h3>What is Try Before You Buy It?</h3>
+            <p>
+              Allowing you to try on sunglasses virtually. No longer with you
+              deal with a limited selection at the store!
+            </p>
+            <p>- Seth</p>
+            {/* <picture>
               <img src={Try} />
-            </picture>
+            </picture> */}
             {/*ENDS wrapper2pic div*/}
           </div>
           {/*ENDS wrapper2 div*/}
@@ -139,22 +145,22 @@ class Home extends Component {
         </div>
         <div id="wrapper4">
           <div className="nav">
-            <ul>
+            {/* <ul>
               <li>home</li>
               <li>info</li>
               <li>TRY</li>
               <li>buy</li>
-            </ul>
+            </ul> */}
             {/*ENDS nav div*/}
           </div>
           <div id="shadeSelection">
             <div id="shadeSlogan">
-              <h3>SELECT YOUR SHADES</h3>
+              {/* <h3>SELECT YOUR SHADES</h3> */}
               {/*ENDS shadeSlogan*/}
             </div>
             <div id="shadeColFlex">
               <div className="shadeCol">
-                <ul>
+                {/* <ul>
                   <li>
                     <img src={Gucci} />
                     <p>Gucci</p>
@@ -163,11 +169,11 @@ class Home extends Component {
                     <img src={Oakley} />
                     <p>Oakley</p>
                   </li>
-                </ul>
+                </ul> */}
                 {/*ENDS shadeCol1*/}
               </div>
               <div className="shadeCol">
-                <ul>
+                {/* <ul>
                   <li>
                     <img src={Prada} />
                     <p>Prada</p>
@@ -176,7 +182,7 @@ class Home extends Component {
                     <img src={RayBan} />
                     <p>Ray-Ban</p>
                   </li>
-                </ul>
+                </ul> */}
                 {/*ENDS shadeCol1*/}
               </div>
               {/*ENDS shadeColFlex div*/}
@@ -189,9 +195,9 @@ class Home extends Component {
         </div>
         <div id="wrapper5">
           <div id="selectBrand">
-            <picture>
+            {/* <picture>
               <img src={Brands} alt="brands" />
-            </picture>
+            </picture> */}
           </div>
           {/*ENDS wrapper5 div */}
         </div>

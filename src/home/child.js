@@ -46,9 +46,11 @@ class MyComponent extends React.Component {
           <div id="alignment">
             <img src={UserPic} />
             <img src={this.state.currentGlassesURL} id="thisIsIt" />
-            <button onClick={this.toggleVisibility} id="clearButton">
-              Clear Head
-            </button>
+            <div>
+              <button onClick={this.toggleVisibility} id="clearButton">
+                Clear Head
+              </button>
+            </div>
             <ProductList setGlassesURLCB={this.setGlassesURL} />
           </div>
         </div>
@@ -60,17 +62,17 @@ class MyComponent extends React.Component {
             <div>
               <img src={Head1} />
               <img src={this.props.currentGlassesURL} />
-              <button onClick={this.toggleVisibility}>Select Head One</button>
+              <button onClick={this.toggleVisibility}>Select Square</button>
             </div>
             <div>
               <img src={Head2} />
               <img src={this.props.currentGlassesURL} />
-              <button onClick={this.toggleVisibility}>Select Head Two</button>
+              <button onClick={this.toggleVisibility}>Select Oval</button>
             </div>
             <div>
               <img src={Head3} />
               <img src={this.props.currentGlassesURL} />
-              <button onClick={this.toggleVisibility}>Select Head Three</button>
+              <button onClick={this.toggleVisibility}>Select Rectangle</button>
             </div>
             <div>
               <img src={UserPic} />

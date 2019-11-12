@@ -42,13 +42,9 @@ export default class ProductCard extends Component {
             <ul className="innerNavList">
               <li>Oakley</li>
               <ul>
-                <li>model X</li>
-                <li>model T</li>
-              </ul>
-              <li>Gucci</li>
-              <ul>
-                <li>model G</li>
-                <li>model K</li>
+                <li>prizm</li>
+                <li>holbrook</li>
+                <li>clifden</li>
               </ul>
             </ul>
             {/*ENDS innerNav div*/}
@@ -148,10 +144,10 @@ export default class ProductCard extends Component {
                 <img src={this.props.product.sunglassesImageSelection} />
               </li>
               <li>
-                <img src={Small2} />
+                <img src={this.props.product.sideImage2} />
               </li>
               <li>
-                <img src={Small3} />
+                <img src={this.props.product.sideImage3} />
               </li>
             </ul>
             {/*ENDS sidePictures div*/}

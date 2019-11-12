@@ -138,10 +138,6 @@ h5 {
   flex-direction: column;
 }
 
-#wrapper3content p {
-  font-weight: 900;
-}
-
 #selectHead {
   display: flex;
   align-items: center;
